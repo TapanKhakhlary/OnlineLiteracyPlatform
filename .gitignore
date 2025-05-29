@@ -1,0 +1,18 @@
+# Dependency directories
+node_modules/
+
+# Environment files
+.env
+.env.local
+
+# Firebase files
+.firebase/
+firebase-debug.log
+
+# Build directories
+build/
+dist/
+
+# IDE files
+.vscode/
+.idea/
