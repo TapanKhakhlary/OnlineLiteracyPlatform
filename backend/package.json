@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "dev": "nodemon server.js --verbose",
+    "dev": "nodemon server.js --ignore logs/*",
     "debug": "nodemon --inspect server.js",
     "test": "jest --watchAll --detectOpenHandles",
     "test:ci": "jest --coverage --runInBand --forceExit",
@@ -41,13 +41,18 @@
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "cloudinary": "^1.41.1",
-    "compression": "^1.7.4",
+    "compression": "^1.8.0",
+    "cookie-parser": "^1.4.7",
     "cors": "^2.8.5",
+    "csrf": "^3.1.0",
+    "csurf": "^1.11.0",
     "dotenv": "^16.5.0",
     "express": "^4.21.2",
     "express-mongo-sanitize": "^2.2.0",
-    "express-rate-limit": "^6.7.0",
-    "helmet": "^7.1.0",
+    "express-rate-limit": "^6.11.2",
+    "express-slow-down": "^2.1.0",
+    "helmet": "^7.2.0",
+    "hpp": "^0.2.3",
     "http-status-codes": "^2.2.0",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.15.1",
@@ -55,10 +60,12 @@
     "multer": "^1.4.5-lts.1",
     "multer-storage-cloudinary": "^4.0.0",
     "redis": "^4.6.7",
+    "response-time": "^2.3.3",
+    "toobusy-js": "^0.5.1",
     "winston": "^3.17.0",
     "winston-loggly-bulk": "^3.3.2",
     "winston-mongodb": "^5.1.1",
-    "xss-clean": "^0.1.1"
+    "xss-clean": "^0.1.4"
   },
   "devDependencies": {
     "cross-env": "^7.0.3",
@@ -73,7 +80,7 @@
     "prettier": "^3.2.4",
     "supertest": "^6.3.3",
     "swagger-jsdoc": "^6.2.8",
-    "swagger-ui-express": "^5.0.0"
+    "swagger-ui-express": "^5.0.1"
   },
   "jest": {
     "testEnvironment": "node",

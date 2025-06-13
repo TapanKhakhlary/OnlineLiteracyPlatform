@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 console.log('Starting server...');
-require('dotenv').config({ path: `.env.${process.env.NODE_ENV || 'development'}` });
+require('dotenv').config(); // Automatically loads `.env` by default
 
 const express = require('express');
 const cors = require('cors');
@@ -20,6 +20,7 @@ const responseTime = require('response-time');
 const slowDown = require('express-slow-down');
 const csrf = require('csurf');
 const toobusy = require('toobusy-js');
+console.log('📦 Loading DB connection...');
 
 // Database connection
 require('./config/db')();
@@ -32,7 +33,7 @@ const requestLogger = require('./middleware/requestLogger');
 const app = express();
 
 // === 1. SECURITY & PERFORMANCE ===
-
+app.use('/api', routes);
 app.set('trust proxy', 1);
 
 app.use((req, res, next) => {
@@ -67,7 +68,7 @@ const apiLimiter = rateLimit({
 const speedLimiter = slowDown({
   windowMs: 15 * 60 * 1000,
   delayAfter: 100,
-  delayMs: 500
+  delayMs: () => 500
 });
 
 const corsOptions = {
