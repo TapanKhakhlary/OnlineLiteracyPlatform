@@ -73,11 +73,11 @@ app.use((req, res, next) => {
 const apiLimiter = rateLimit({
   windowMs: 15 * 60 * 1000,
   max: process.env.NODE_ENV === 'development' ? 1000 : 100,
-  message: {
-    status: 'error',
-    message: 'Too many requests from this IP, please try again later',
-    requestId: req.id
-  },
+  message: (req, res) => ({
+  status: 'error',
+  message: 'Too many requests from this IP, please try again later',
+  requestId: req.id
+}),
   skip: (req) => req.path === '/api/health',
   standardHeaders: true,
   legacyHeaders: false

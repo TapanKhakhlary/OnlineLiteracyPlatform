@@ -24,7 +24,9 @@
     border: 1px solid #ccc;
     border-radius: 6px;
     box-sizing: border-box;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    transition:
+      border-color 0.3s ease,
+      box-shadow 0.3s ease;
 
     &:focus {
       outline: none;

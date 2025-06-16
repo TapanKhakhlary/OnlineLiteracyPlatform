@@ -65,7 +65,9 @@
         border: 1px solid #cbd5e1;
         border-radius: 5px;
         font-size: 0.85rem;
-        transition: border-color 0.25s ease, box-shadow 0.25s ease;
+        transition:
+          border-color 0.25s ease,
+          box-shadow 0.25s ease;
 
         &:focus {
           outline: none;

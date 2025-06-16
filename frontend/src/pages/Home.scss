@@ -10,7 +10,11 @@
     align-items: center;
     min-height: 80vh;
     padding: 4rem 2rem;
-   background: linear-gradient(135deg, color.scale($primary-color, $lightness: 5%) 0%, $primary-color 100%);
+    background: linear-gradient(
+      135deg,
+      color.scale($primary-color, $lightness: 5%) 0%,
+      $primary-color 100%
+    );
     color: white;
 
     .hero-content {
