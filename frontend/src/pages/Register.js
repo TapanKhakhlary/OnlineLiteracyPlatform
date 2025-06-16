@@ -91,6 +91,7 @@ const Register = () => {
       await register({ username, email, password, role });
       navigate('/login');
     } catch (error) {
+       console.error('Register Error:', error);
       setSubmitError(error.message || 'Registration failed. Please try again.');
     }
   };

@@ -11,7 +11,7 @@ const handleError = (error) => {
   err.status = error.response?.status;
   err.details = error.response?.data?.errors || null;
 
-  throw err;
+  return Promise.reject(err);
 };
 
 // Token management utilities
