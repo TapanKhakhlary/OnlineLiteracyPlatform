@@ -133,3 +133,5 @@
     at Layer.handle [as handle_request] (D:\test project 3\online-literacy-platform\backend\node_modules\express\lib\router\layer.js:95:5)
     at trim_prefix (D:\test project 3\online-literacy-platform\backend\node_modules\express\lib\router\index.js:328:13)
 [2025-06-16 23:33:28] [31merror[39m: ❌ MongoDB connection error: getaddrinfo ENOTFOUND mongo
+[2025-06-17 00:46:20] [31merror[39m: ❌ MongoDB connection error: getaddrinfo ENOTFOUND mongo
+[2025-06-17 00:51:30] [31merror[39m: ❌ MongoDB connection error: getaddrinfo ENOTFOUND mongo
