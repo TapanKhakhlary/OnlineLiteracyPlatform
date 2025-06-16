@@ -1,4 +1,5 @@
-FROM node:14-alpine
+# backend/Dockerfile
+FROM node:16-alpine
 
 WORKDIR /app
 
@@ -10,4 +11,4 @@ COPY . .
 
 EXPOSE 5000
 
-CMD ["npm", "start"]
+CMD ["node", "server.js"]

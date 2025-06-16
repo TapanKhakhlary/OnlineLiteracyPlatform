@@ -117,13 +117,14 @@
       "prettier --write"
     ]
   },
-  "jest": {
-    "collectCoverageFrom": [
-      "src/**/*.{js,jsx,ts,tsx}",
-      "!src/**/*.d.ts",
-      "!src/index.tsx",
-      "!src/reportWebVitals.ts",
-      "!src/setupTests.ts"
-    ]
-  }
+  
+    "jest": {
+      "testEnvironment": "jsdom",
+      "transformIgnorePatterns": [
+        "/node_modules/(?!axios|react-toastify)/"
+      ],
+      "moduleNameMapper": {
+        "\\.(css|scss)$": "identity-obj-proxy"
+      }
+    }
 }
