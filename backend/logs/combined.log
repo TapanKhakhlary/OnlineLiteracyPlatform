@@ -63,3 +63,41 @@
 [2025-06-16 11:46:11] [32minfo[39m: 🔄 Connecting to MongoDB...
 [2025-06-16 11:46:11] [32minfo[39m: MONGO_URI: mongodb://localhost:27017/online-literacy-platform?connectTimeoutMS=5000
 [2025-06-16 11:46:11] [32minfo[39m: ✅ MongoDB Connected...
+[2025-06-16 13:51:55] [32minfo[39m: 🔄 Connecting to MongoDB...
+[2025-06-16 13:51:55] [32minfo[39m: MONGO_URI: mongodb://localhost:27017/literacy-platform?connectTimeoutMS=5000
+[2025-06-16 13:51:55] [32minfo[39m: ✅ MongoDB Connected...
+[2025-06-16 21:28:41] [31merror[39m: Error: Not found - GET /api
+    at notFound (D:\test project 3\online-literacy-platform\backend\middleware\errorMiddleware.js:6:17)
+    at Layer.handle [as handle_request] (D:\test project 3\online-literacy-platform\backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\test project 3\online-literacy-platform\backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\test project 3\online-literacy-platform\backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\test project 3\online-literacy-platform\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\test project 3\online-literacy-platform\backend\node_modules\express\lib\router\index.js:280:10)
+    at makeResponseCacheable (D:\test project 3\online-literacy-platform\backend\node_modules\apicache\src\apicache.js:242:5)
+    at cache (D:\test project 3\online-literacy-platform\backend\node_modules\apicache\src\apicache.js:689:16)
+    at Layer.handle [as handle_request] (D:\test project 3\online-literacy-platform\backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\test project 3\online-literacy-platform\backend\node_modules\express\lib\router\index.js:328:13)
+[2025-06-16 21:28:41] [32minfo[39m: Request completed
+[2025-06-16 21:28:41] [32minfo[39m: ::1 - - [16/Jun/2025:15:58:41 +0000] "GET /api HTTP/1.1" 404 61 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+[2025-06-16 21:28:41] [31merror[39m: Error: Not found - GET /favicon.ico
+    at notFound (D:\test project 3\online-literacy-platform\backend\middleware\errorMiddleware.js:6:17)
+    at Layer.handle [as handle_request] (D:\test project 3\online-literacy-platform\backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\test project 3\online-literacy-platform\backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\test project 3\online-literacy-platform\backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\test project 3\online-literacy-platform\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\test project 3\online-literacy-platform\backend\node_modules\express\lib\router\index.js:280:10)
+    at makeResponseCacheable (D:\test project 3\online-literacy-platform\backend\node_modules\apicache\src\apicache.js:242:5)
+    at cache (D:\test project 3\online-literacy-platform\backend\node_modules\apicache\src\apicache.js:689:16)
+    at Layer.handle [as handle_request] (D:\test project 3\online-literacy-platform\backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\test project 3\online-literacy-platform\backend\node_modules\express\lib\router\index.js:328:13)
+[2025-06-16 21:28:41] [32minfo[39m: Request completed
+[2025-06-16 21:28:41] [32minfo[39m: ::1 - - [16/Jun/2025:15:58:41 +0000] "GET /favicon.ico HTTP/1.1" 404 69 "http://localhost:5000/api" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+[2025-06-16 21:43:24] [32minfo[39m: 🔄 Connecting to MongoDB...
+[2025-06-16 21:43:24] [32minfo[39m: MONGO_URI: mongodb://localhost:27017/literacy-platform?connectTimeoutMS=5000
+[2025-06-16 21:43:24] [32minfo[39m: ✅ MongoDB Connected...
+[2025-06-16 22:17:09] [32minfo[39m: 🔄 Connecting to MongoDB...
+[2025-06-16 22:17:09] [32minfo[39m: MONGO_URI: mongodb://localhost:27017/literacy-platform?connectTimeoutMS=5000
+[2025-06-16 22:17:09] [32minfo[39m: ✅ MongoDB Connected...
+[2025-06-16 22:22:18] [32minfo[39m: 🔄 Connecting to MongoDB...
+[2025-06-16 22:22:18] [32minfo[39m: MONGO_URI: mongodb://localhost:27017/literacy-platform?connectTimeoutMS=5000
+[2025-06-16 22:22:18] [32minfo[39m: ✅ MongoDB Connected...

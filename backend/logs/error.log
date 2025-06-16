@@ -110,3 +110,25 @@
     at Server.emit (node:events:524:28)
     at emitCloseNT (node:net:2344:8)
     at process.processTicksAndRejections (node:internal/process/task_queues:81:21)
+[2025-06-16 21:28:41] [31merror[39m: Error: Not found - GET /api
+    at notFound (D:\test project 3\online-literacy-platform\backend\middleware\errorMiddleware.js:6:17)
+    at Layer.handle [as handle_request] (D:\test project 3\online-literacy-platform\backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\test project 3\online-literacy-platform\backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\test project 3\online-literacy-platform\backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\test project 3\online-literacy-platform\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\test project 3\online-literacy-platform\backend\node_modules\express\lib\router\index.js:280:10)
+    at makeResponseCacheable (D:\test project 3\online-literacy-platform\backend\node_modules\apicache\src\apicache.js:242:5)
+    at cache (D:\test project 3\online-literacy-platform\backend\node_modules\apicache\src\apicache.js:689:16)
+    at Layer.handle [as handle_request] (D:\test project 3\online-literacy-platform\backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\test project 3\online-literacy-platform\backend\node_modules\express\lib\router\index.js:328:13)
+[2025-06-16 21:28:41] [31merror[39m: Error: Not found - GET /favicon.ico
+    at notFound (D:\test project 3\online-literacy-platform\backend\middleware\errorMiddleware.js:6:17)
+    at Layer.handle [as handle_request] (D:\test project 3\online-literacy-platform\backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\test project 3\online-literacy-platform\backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\test project 3\online-literacy-platform\backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\test project 3\online-literacy-platform\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\test project 3\online-literacy-platform\backend\node_modules\express\lib\router\index.js:280:10)
+    at makeResponseCacheable (D:\test project 3\online-literacy-platform\backend\node_modules\apicache\src\apicache.js:242:5)
+    at cache (D:\test project 3\online-literacy-platform\backend\node_modules\apicache\src\apicache.js:689:16)
+    at Layer.handle [as handle_request] (D:\test project 3\online-literacy-platform\backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\test project 3\online-literacy-platform\backend\node_modules\express\lib\router\index.js:328:13)
