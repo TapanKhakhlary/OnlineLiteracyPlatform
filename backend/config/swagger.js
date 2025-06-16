@@ -1,17 +1,18 @@
 const swaggerJsdoc = require('swagger-jsdoc');
 const swaggerUi = require('swagger-ui-express');
 
+// Swagger configuration options
 const options = {
   definition: {
     openapi: '3.0.0',
     info: {
       title: 'Online Literacy Platform API',
       version: '1.0.0',
-      description: 'API documentation for the Online Literacy Platform'
+      description: 'API documentation for the literacy platform'
     },
     servers: [
       {
-        url: 'http://localhost:5000/api'
+        url: process.env.API_BASE_URL || 'http://localhost:5000/api/v1'
       }
     ],
     components: {
@@ -23,11 +24,13 @@ const options = {
         }
       }
     },
-    security: [{
-      bearerAuth: []
-    }]
+    security: [
+      {
+        bearerAuth: []
+      }
+    ]
   },
-  apis: ['./routes/*.js', './models/*.js']
+  apis: ['./routes/*.js', './controllers/*.js'] // Adjusted to match your structure
 };
 
 const specs = swaggerJsdoc(options);
