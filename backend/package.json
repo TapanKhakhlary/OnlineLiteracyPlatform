@@ -68,7 +68,9 @@
     "winston": "^3.17.0",
     "winston-loggly-bulk": "^3.3.2",
     "winston-mongodb": "^5.1.1",
-    "xss-clean": "^0.1.4"
+    "xss-clean": "^0.1.4",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1"
   },
   "devDependencies": {
     "cross-env": "^7.0.3",
@@ -81,9 +83,7 @@
     "jest": "^29.7.0",
     "nodemon": "^3.1.10",
     "prettier": "^3.2.4",
-    "supertest": "^6.3.3",
-    "swagger-jsdoc": "^6.2.8",
-    "swagger-ui-express": "^5.0.1"
+    "supertest": "^6.3.3"
   },
   "jest": {
     "testEnvironment": "node",
