@@ -1,0 +1,84 @@
+@use '../styles/variables' as *;
+@use 'sass:color';
+
+.form-input {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.25rem;
+  max-width: 100%;
+
+  label {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: $dark-color;
+    font-size: 0.95rem;
+  }
+
+  input,
+  .form-control {
+    width: 100%;
+    max-width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+    &:focus {
+      outline: none;
+      border-color: $primary-color;
+      box-shadow: 0 0 0 3px rgba($primary-color, 0.1);
+    }
+
+    &[data-focused='true']:invalid {
+      border-color: $danger-color;
+    }
+
+    &.input-error {
+      border-color: $danger-color;
+    }
+  }
+
+  .error-message {
+    color: $danger-color;
+    font-size: 0.8rem;
+    margin-top: 0.25rem;
+    line-height: 1.3;
+    transition: opacity 0.2s ease;
+    opacity: 0;
+    display: block;
+  }
+
+  input:invalid[data-focused='true'] ~ .error-message {
+    opacity: 1;
+  }
+
+  // Optional: show error always if passed
+  .input-error ~ .error-message {
+    opacity: 1;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .form-input {
+    label {
+      color: #f0f0f0;
+    }
+
+    input {
+      background-color: #1e1e1e;
+      border-color: #444;
+      color: #fff;
+
+      &::placeholder {
+        color: #aaa;
+      }
+    }
+
+    .error-message {
+      color: color.adjust($danger-color, $lightness: 15%);
+    }
+  }
+}
