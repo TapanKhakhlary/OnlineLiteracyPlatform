@@ -15,6 +15,7 @@ const Register = () => {
   });
 
   const [errors, setErrors] = useState({});
+  const [touched, setTouched] = useState({});
   const [showPasswords, setShowPasswords] = useState(false);
   const [agreeToTerms, setAgreeToTerms] = useState(false);
   const [submitError, setSubmitError] = useState('');
@@ -62,17 +63,22 @@ const Register = () => {
     },
   ];
 
+  const handleBlur = (e) => {
+    setTouched({ ...touched, [e.target.name]: true });
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setSubmitError('');
 
     const newErrors = {};
     inputs.forEach((input) => {
-      if (input.required && !values[input.name]) {
+      const value = values[input.name];
+      if (input.required && !value) {
         newErrors[input.name] = 'This field is required';
-      } else if (input.pattern && !new RegExp(input.pattern).test(values[input.name])) {
+      } else if (input.pattern && !new RegExp(input.pattern).test(value)) {
         newErrors[input.name] = input.errorMessage;
-      } else if (input.validate && !input.validate(values[input.name])) {
+      } else if (input.validate && !input.validate(value)) {
         newErrors[input.name] = input.errorMessage;
       }
     });
@@ -81,17 +87,16 @@ const Register = () => {
       newErrors.agreeToTerms = 'You must agree to the terms';
     }
 
-    if (Object.keys(newErrors).length > 0) {
-      setErrors(newErrors);
-      return;
-    }
+    setErrors(newErrors);
+
+    if (Object.keys(newErrors).length > 0) return;
 
     try {
       const { username, email, password, role } = values;
       await register({ username, email, password, role });
       navigate('/login');
     } catch (error) {
-       console.error('Register Error:', error);
+      console.error('Register Error:', error);
       setSubmitError(error.message || 'Registration failed. Please try again.');
     }
   };
@@ -129,7 +134,8 @@ const Register = () => {
                 {...input}
                 value={values[input.name]}
                 onChange={onChange}
-                error={errors[input.name]}
+                onBlur={handleBlur}
+                error={touched[input.name] && errors[input.name]}
               />
             </div>
           ))}
@@ -141,7 +147,8 @@ const Register = () => {
                   {...input}
                   value={values[input.name]}
                   onChange={onChange}
-                  error={errors[input.name]}
+                  onBlur={handleBlur}
+                  error={touched[input.name] && errors[input.name]}
                 />
               </div>
             ))}
@@ -154,6 +161,7 @@ const Register = () => {
               id="role"
               value={values.role}
               onChange={onChange}
+              onBlur={handleBlur}
               className="form-select"
             >
               <option value="student">Student</option>
@@ -178,18 +186,32 @@ const Register = () => {
                 type="checkbox"
                 id="agreeToTerms"
                 checked={agreeToTerms}
-                onChange={(e) => setAgreeToTerms(e.target.checked)}
+                onChange={(e) => {
+                  setAgreeToTerms(e.target.checked);
+                  setTouched({ ...touched, agreeToTerms: true });
+                }}
               />
               <label htmlFor="agreeToTerms">
                 I agree to the <Link to="/terms">Terms</Link> and <Link to="/privacy">Privacy</Link>
               </label>
-              {errors.agreeToTerms && (
+              {touched.agreeToTerms && errors.agreeToTerms && (
                 <div className="invalid-feedback d-block">{errors.agreeToTerms}</div>
               )}
             </div>
           </div>
 
-          <button type="submit" className="btn-primary" disabled={!agreeToTerms}>
+          <button
+            type="submit"
+            className="btn-primary"
+            disabled={
+              !agreeToTerms ||
+              !values.username ||
+              !values.email ||
+              !values.password ||
+              !values.confirmPassword ||
+              values.password !== values.confirmPassword
+            }
+          >
             Sign Up
           </button>
         </form>

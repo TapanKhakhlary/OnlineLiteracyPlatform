@@ -1,15 +1,17 @@
 import React, { useState } from 'react';
 import './FormInput.scss';
 
-const FormInput = ({ label, errorMessage, onChange, id, name, ...inputProps }) => {
+const FormInput = ({ label, error, onChange, onBlur, id, name, ...inputProps }) => {
   const [focused, setFocused] = useState(false);
   const inputId = id || name;
   const errorId = `${inputId}-error`;
 
-  const handleFocus = () => setFocused(true);
+  const handleFocus = () => {
+    setFocused(true);
+  };
 
   return (
-    <div className={`form-input ${errorMessage ? 'has-error' : ''}`}>
+    <div className={`form-input ${error ? 'has-error' : ''}`}>
       {label && (
         <label htmlFor={inputId} className="input-label">
           {label}
@@ -21,18 +23,21 @@ const FormInput = ({ label, errorMessage, onChange, id, name, ...inputProps }) =
         id={inputId}
         name={name}
         onChange={onChange}
-        onBlur={handleFocus}
+        onBlur={(e) => {
+          handleFocus();
+          if (onBlur) onBlur(e);
+        }}
         onFocus={() => name === 'confirmPassword' && setFocused(true)}
-        aria-invalid={!!errorMessage}
-        aria-describedby={errorMessage ? errorId : undefined}
+        aria-invalid={!!error}
+        aria-describedby={error ? errorId : undefined}
         data-focused={focused}
-        className={`input-field ${errorMessage ? 'input-error' : ''}`}
+        className={`input-field ${error ? 'input-error' : ''}`}
         autoComplete="off"
       />
 
-      {errorMessage && (
+      {error && (
         <span id={errorId} className="error-message" role="alert">
-          {errorMessage}
+          {error}
         </span>
       )}
     </div>

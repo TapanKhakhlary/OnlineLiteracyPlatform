@@ -1,7 +1,10 @@
 @use 'sass:color';
 @use '../styles/variables' as *;
 
-.register-container {
+// ----------------------------
+// Container
+// ----------------------------
+.register-page {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,7 +13,6 @@
   padding: 2rem;
   background-color: #f9fafc;
   gap: 3rem;
-  text-align: center;
 
   @media (max-width: 992px) {
     flex-direction: column;
@@ -19,7 +21,48 @@
   }
 }
 
-.register-form-container {
+// ----------------------------
+// Illustration Section
+// ----------------------------
+.register-illustration {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 420px;
+
+  img {
+    width: 100%;
+    height: auto;
+    max-height: 45vh;
+    object-fit: contain;
+    display: block;
+    border-radius: 8px;
+  }
+
+  @media (max-width: 992px) {
+    max-width: 85%;
+    img {
+      max-height: 40vh;
+    }
+  }
+
+  @media (max-width: 768px) {
+    max-width: 90%;
+    img {
+      max-height: 35vh;
+    }
+  }
+
+  @media (min-width: 1600px) {
+    max-width: 500px;
+  }
+}
+
+// ----------------------------
+// Form Section
+// ----------------------------
+.register-form {
   width: 100%;
   max-width: 360px;
   background-color: #fff;
@@ -29,6 +72,7 @@
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease-in-out;
 
+  // Header
   .register-header {
     margin-bottom: 1.5rem;
 
@@ -45,6 +89,7 @@
     }
   }
 
+  // Form
   form {
     .form-group {
       margin-bottom: 1rem;
@@ -65,9 +110,7 @@
         border: 1px solid #cbd5e1;
         border-radius: 5px;
         font-size: 0.85rem;
-        transition:
-          border-color 0.25s ease,
-          box-shadow 0.25s ease;
+        transition: border-color 0.25s ease, box-shadow 0.25s ease;
 
         &:focus {
           outline: none;
@@ -84,12 +127,18 @@
         color: $danger-color;
         font-size: 0.72rem;
         margin-top: 0.2rem;
-        opacity: 0;
         transition: opacity 0.2s ease;
+        opacity: 1;
+      }
+    }
 
-        &.visible {
-          opacity: 1;
-        }
+    .form-row {
+      display: flex;
+      gap: 1rem;
+
+      @media (max-width: 500px) {
+        flex-direction: column;
+        gap: 0.75rem;
       }
     }
 
@@ -102,14 +151,14 @@
         margin-bottom: 0.8rem;
         text-align: left;
 
-        &-input {
+        input[type='checkbox'] {
           margin-right: 0.6rem;
           width: 0.95rem;
           height: 0.95rem;
           accent-color: $primary-color;
         }
 
-        &-label {
+        label {
           font-size: 0.85rem;
           color: color.adjust($dark-color, $lightness: 15%);
 
@@ -148,11 +197,11 @@
     }
   }
 
-  .auth-redirect {
-    margin-top: 0.8rem;
+  .auth-footer {
+    margin-top: 1rem;
     font-size: 0.85rem;
-    color: color.adjust($dark-color, $lightness: 15%);
     text-align: center;
+    color: color.adjust($dark-color, $lightness: 15%);
 
     a {
       color: $primary-color;
@@ -163,40 +212,5 @@
         text-decoration: underline;
       }
     }
-  }
-}
-
-.register-illustration {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  max-width: 420px;
-
-  img {
-    width: 100%;
-    height: auto;
-    max-height: 45vh;
-    object-fit: contain;
-    display: block;
-    border-radius: 8px;
-  }
-
-  @media (max-width: 992px) {
-    max-width: 85%;
-    img {
-      max-height: 40vh;
-    }
-  }
-
-  @media (max-width: 768px) {
-    max-width: 90%;
-    img {
-      max-height: 35vh;
-    }
-  }
-
-  @media (min-width: 1600px) {
-    max-width: 500px;
   }
 }
