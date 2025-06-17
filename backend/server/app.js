@@ -79,7 +79,10 @@ const apiLimiter = rateLimit({
 const speedLimiter = slowDown({
   windowMs: 15 * 60 * 1000,
   delayAfter: 100,
-  delayMs: 500
+  delayMs: () => 500, // ✅ 500ms delay after 100 requests
+  validate: {
+    delayMs: false // ✅ silences the warning
+  }
 });
 
 // CORS

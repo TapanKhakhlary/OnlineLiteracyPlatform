@@ -1,0 +1,55 @@
+[2025-06-18 00:13:05] [31merror[39m: TypeError: Missing parameter name at 1: https://git.new/pathToRegexpError
+    at name (D:\test project 3\online-literacy-platform\backend\server\node_modules\path-to-regexp\dist\index.js:73:19)
+    at lexer (D:\test project 3\online-literacy-platform\backend\server\node_modules\path-to-regexp\dist\index.js:91:27)
+    at lexer.next (<anonymous>)
+    at Iter.peek (D:\test project 3\online-literacy-platform\backend\server\node_modules\path-to-regexp\dist\index.js:106:38)
+    at Iter.tryConsume (D:\test project 3\online-literacy-platform\backend\server\node_modules\path-to-regexp\dist\index.js:112:28)
+    at Iter.text (D:\test project 3\online-literacy-platform\backend\server\node_modules\path-to-regexp\dist\index.js:128:30)
+    at consume (D:\test project 3\online-literacy-platform\backend\server\node_modules\path-to-regexp\dist\index.js:152:29)
+    at parse (D:\test project 3\online-literacy-platform\backend\server\node_modules\path-to-regexp\dist\index.js:183:20)
+    at D:\test project 3\online-literacy-platform\backend\server\node_modules\path-to-regexp\dist\index.js:294:74
+    at Array.map (<anonymous>)
+[2025-06-18 00:14:25] [31merror[39m: TypeError: Missing parameter name at 1: https://git.new/pathToRegexpError
+    at name (D:\test project 3\online-literacy-platform\backend\server\node_modules\path-to-regexp\dist\index.js:73:19)
+    at lexer (D:\test project 3\online-literacy-platform\backend\server\node_modules\path-to-regexp\dist\index.js:91:27)
+    at lexer.next (<anonymous>)
+    at Iter.peek (D:\test project 3\online-literacy-platform\backend\server\node_modules\path-to-regexp\dist\index.js:106:38)
+    at Iter.tryConsume (D:\test project 3\online-literacy-platform\backend\server\node_modules\path-to-regexp\dist\index.js:112:28)
+    at Iter.text (D:\test project 3\online-literacy-platform\backend\server\node_modules\path-to-regexp\dist\index.js:128:30)
+    at consume (D:\test project 3\online-literacy-platform\backend\server\node_modules\path-to-regexp\dist\index.js:152:29)
+    at parse (D:\test project 3\online-literacy-platform\backend\server\node_modules\path-to-regexp\dist\index.js:183:20)
+    at D:\test project 3\online-literacy-platform\backend\server\node_modules\path-to-regexp\dist\index.js:294:74
+    at Array.map (<anonymous>)
+[2025-06-18 00:16:33] [31merror[39m: TypeError: Missing parameter name at 1: https://git.new/pathToRegexpError
+    at name (D:\test project 3\online-literacy-platform\backend\server\node_modules\path-to-regexp\dist\index.js:73:19)
+    at lexer (D:\test project 3\online-literacy-platform\backend\server\node_modules\path-to-regexp\dist\index.js:91:27)
+    at lexer.next (<anonymous>)
+    at Iter.peek (D:\test project 3\online-literacy-platform\backend\server\node_modules\path-to-regexp\dist\index.js:106:38)
+    at Iter.tryConsume (D:\test project 3\online-literacy-platform\backend\server\node_modules\path-to-regexp\dist\index.js:112:28)
+    at Iter.text (D:\test project 3\online-literacy-platform\backend\server\node_modules\path-to-regexp\dist\index.js:128:30)
+    at consume (D:\test project 3\online-literacy-platform\backend\server\node_modules\path-to-regexp\dist\index.js:152:29)
+    at parse (D:\test project 3\online-literacy-platform\backend\server\node_modules\path-to-regexp\dist\index.js:183:20)
+    at D:\test project 3\online-literacy-platform\backend\server\node_modules\path-to-regexp\dist\index.js:294:74
+    at Array.map (<anonymous>)
+[2025-06-18 00:18:13] [31merror[39m: TypeError: Missing parameter name at 1: https://git.new/pathToRegexpError
+    at name (D:\test project 3\online-literacy-platform\backend\server\node_modules\path-to-regexp\dist\index.js:73:19)
+    at lexer (D:\test project 3\online-literacy-platform\backend\server\node_modules\path-to-regexp\dist\index.js:91:27)
+    at lexer.next (<anonymous>)
+    at Iter.peek (D:\test project 3\online-literacy-platform\backend\server\node_modules\path-to-regexp\dist\index.js:106:38)
+    at Iter.tryConsume (D:\test project 3\online-literacy-platform\backend\server\node_modules\path-to-regexp\dist\index.js:112:28)
+    at Iter.text (D:\test project 3\online-literacy-platform\backend\server\node_modules\path-to-regexp\dist\index.js:128:30)
+    at consume (D:\test project 3\online-literacy-platform\backend\server\node_modules\path-to-regexp\dist\index.js:152:29)
+    at parse (D:\test project 3\online-literacy-platform\backend\server\node_modules\path-to-regexp\dist\index.js:183:20)
+    at D:\test project 3\online-literacy-platform\backend\server\node_modules\path-to-regexp\dist\index.js:294:74
+    at Array.map (<anonymous>)
+[2025-06-18 00:18:20] [31merror[39m: TypeError: Missing parameter name at 1: https://git.new/pathToRegexpError
+    at name (D:\test project 3\online-literacy-platform\backend\server\node_modules\path-to-regexp\dist\index.js:73:19)
+    at lexer (D:\test project 3\online-literacy-platform\backend\server\node_modules\path-to-regexp\dist\index.js:91:27)
+    at lexer.next (<anonymous>)
+    at Iter.peek (D:\test project 3\online-literacy-platform\backend\server\node_modules\path-to-regexp\dist\index.js:106:38)
+    at Iter.tryConsume (D:\test project 3\online-literacy-platform\backend\server\node_modules\path-to-regexp\dist\index.js:112:28)
+    at Iter.text (D:\test project 3\online-literacy-platform\backend\server\node_modules\path-to-regexp\dist\index.js:128:30)
+    at consume (D:\test project 3\online-literacy-platform\backend\server\node_modules\path-to-regexp\dist\index.js:152:29)
+    at parse (D:\test project 3\online-literacy-platform\backend\server\node_modules\path-to-regexp\dist\index.js:183:20)
+    at D:\test project 3\online-literacy-platform\backend\server\node_modules\path-to-regexp\dist\index.js:294:74
+    at Array.map (<anonymous>)
