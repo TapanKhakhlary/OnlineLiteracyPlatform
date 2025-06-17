@@ -1,10 +1,10 @@
 const express = require('express');
 const router = express.Router();
 
-// Sub-route imports
 const authRoutes = require('./auth');
+const courseRoutes = require('./courseRoutes');
 
-// Mount sub-routes
-router.use('/auth', authRoutes); // handles /api/v1/auth/*
+router.use('/auth', authRoutes);
+router.use('/courses', courseRoutes);
 
 module.exports = router;
