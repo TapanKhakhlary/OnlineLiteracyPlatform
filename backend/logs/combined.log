@@ -173,3 +173,31 @@
     at trim_prefix (D:\test project 3\online-literacy-platform\backend\node_modules\express\lib\router\index.js:328:13)
 [2025-06-17 13:27:57] [32minfo[39m: Request completed
 [2025-06-17 13:27:57] [32minfo[39m: ::1 - - [17/Jun/2025:07:57:57 +0000] "POST /api/auth/register HTTP/1.1" 404 76 "-" "PostmanRuntime/7.44.0"
+[2025-06-17 13:42:28] [32minfo[39m: Request completed
+[2025-06-17 13:42:28] [32minfo[39m: ::1 - - [17/Jun/2025:08:12:28 +0000] "POST /api/v1/auth/register HTTP/1.1" 200 217 "-" "PostmanRuntime/7.44.0"
+[2025-06-17 13:44:58] [32minfo[39m: Request completed
+[2025-06-17 13:44:58] [32minfo[39m: ::1 - - [17/Jun/2025:08:14:58 +0000] "POST /api/v1/auth/register HTTP/1.1" 400 29 "-" "PostmanRuntime/7.44.0"
+[2025-06-17 13:45:32] [32minfo[39m: Request completed
+[2025-06-17 13:45:32] [32minfo[39m: ::1 - - [17/Jun/2025:08:15:32 +0000] "POST /api/v1/auth/login HTTP/1.1" 200 217 "-" "PostmanRuntime/7.44.0"
+[2025-06-17 13:46:41] [32minfo[39m: Request completed
+[2025-06-17 13:46:41] [32minfo[39m: ::1 - - [17/Jun/2025:08:16:41 +0000] "POST /api/v1/auth/login HTTP/1.1" 200 217 "-" "PostmanRuntime/7.44.0"
+[2025-06-17 13:48:04] [32minfo[39m: Request completed
+[2025-06-17 13:48:04] [32minfo[39m: ::1 - - [17/Jun/2025:08:18:04 +0000] "POST /api/v1/auth/register HTTP/1.1" 400 29 "-" "PostmanRuntime/7.44.0"
+[2025-06-17 13:48:22] [32minfo[39m: Request completed
+[2025-06-17 13:48:22] [32minfo[39m: ::1 - - [17/Jun/2025:08:18:22 +0000] "POST /api/v1/auth/login HTTP/1.1" 200 217 "-" "PostmanRuntime/7.44.0"
+[2025-06-17 13:48:28] [32minfo[39m: Request completed
+[2025-06-17 13:48:28] [32minfo[39m: ::1 - - [17/Jun/2025:08:18:28 +0000] "POST /api/v1/auth/register HTTP/1.1" 400 29 "-" "PostmanRuntime/7.44.0"
+[2025-06-17 13:50:22] [32minfo[39m: Request completed
+[2025-06-17 13:50:22] [32minfo[39m: ::1 - - [17/Jun/2025:08:20:22 +0000] "POST /api/v1/auth/register HTTP/1.1" 400 29 "-" "PostmanRuntime/7.44.0"
+[2025-06-17 13:51:09] [32minfo[39m: Request completed
+[2025-06-17 13:51:09] [32minfo[39m: ::1 - - [17/Jun/2025:08:21:09 +0000] "POST /api/v1/auth/register HTTP/1.1" 400 29 "-" "PostmanRuntime/7.44.0"
+[2025-06-17 13:51:21] [32minfo[39m: Request completed
+[2025-06-17 13:51:21] [32minfo[39m: ::1 - - [17/Jun/2025:08:21:21 +0000] "POST /api/v1/auth/register HTTP/1.1" 400 29 "-" "PostmanRuntime/7.44.0"
+[2025-06-17 13:55:28] [32minfo[39m: Request completed
+[2025-06-17 13:55:28] [32minfo[39m: ::1 - - [17/Jun/2025:08:25:28 +0000] "POST /api/v1/auth/register HTTP/1.1" 400 29 "-" "PostmanRuntime/7.44.0"
+[2025-06-17 13:56:11] [32minfo[39m: Request completed
+[2025-06-17 13:56:11] [32minfo[39m: ::1 - - [17/Jun/2025:08:26:11 +0000] "POST /api/v1/auth/login HTTP/1.1" 200 217 "-" "PostmanRuntime/7.44.0"
+[2025-06-17 14:09:47] [32minfo[39m: Request completed
+[2025-06-17 14:09:47] [32minfo[39m: ::1 - - [17/Jun/2025:08:39:47 +0000] "POST /api/v1/auth/register HTTP/1.1" 400 29 "-" "PostmanRuntime/7.44.0"
+[2025-06-17 14:10:00] [32minfo[39m: Request completed
+[2025-06-17 14:10:00] [32minfo[39m: ::1 - - [17/Jun/2025:08:40:00 +0000] "POST /api/v1/auth/login HTTP/1.1" 400 29 "-" "PostmanRuntime/7.44.0"
