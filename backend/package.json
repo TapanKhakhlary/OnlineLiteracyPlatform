@@ -2,11 +2,11 @@
   "name": "online-literacy-platform-backend",
   "version": "1.0.0",
   "description": "Backend service for the Online Literacy Platform - providing API endpoints for user management, course content, and learning progress tracking",
-  "main": "server.js",
+  "main": "server/server.js",
   "scripts": {
-    "start": "node server.js",
-    "dev": "nodemon server.js --ignore logs/*",
-    "debug": "nodemon --inspect server.js",
+    "start": "node server/server.js",
+    "dev": "nodemon server/server.js --ignore logs/*",
+    "debug": "nodemon --inspect server/server.js",
     "test": "jest --watchAll --detectOpenHandles",
     "test:ci": "jest --coverage --runInBand --forceExit",
     "test:watch": "jest --watch",
@@ -63,14 +63,14 @@
     "multer-storage-cloudinary": "^4.0.0",
     "redis": "^4.6.7",
     "response-time": "^2.3.3",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1",
     "toobusy-js": "^0.5.1",
     "uuid": "^11.1.0",
     "winston": "^3.17.0",
     "winston-loggly-bulk": "^3.3.2",
     "winston-mongodb": "^5.1.1",
-    "xss-clean": "^0.1.4",
-    "swagger-jsdoc": "^6.2.8",
-    "swagger-ui-express": "^5.0.1"
+    "xss-clean": "^0.1.4"
   },
   "devDependencies": {
     "cross-env": "^7.0.3",
