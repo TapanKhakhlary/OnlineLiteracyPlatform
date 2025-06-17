@@ -4,8 +4,8 @@
   "description": "Backend service for the Online Literacy Platform - providing API endpoints for user management, course content, and learning progress tracking",
   "main": "server/server.js",
   "scripts": {
-    "start": "node server/server.js",
-    "dev": "nodemon server/server.js --ignore logs/*",
+    "start": "node server/index.js",
+    "dev": "nodemon server/index.js --ignore logs/*",
     "debug": "nodemon --inspect server/server.js",
     "test": "jest --watchAll --detectOpenHandles",
     "test:ci": "jest --coverage --runInBand --forceExit",

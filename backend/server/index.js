@@ -4,10 +4,10 @@ const winston = require('./config/logger');
 
 let app;
 try {
-  app = require('./app'); // Catch if app.js fails
+  app = require('./app');
 } catch (err) {
   winston.error('❌ Error loading app.js:', err);
-  console.error(err); // Show full error stack
+  console.error(err);
   process.exit(1);
 }
 
@@ -16,7 +16,7 @@ const PORT = process.env.PORT || 5000;
 (async () => {
   try {
     winston.info('🔄 Connecting to MongoDB...');
-    require('./config/db')();
+    await require('./config/db')(); // ✅ Await DB connection
 
     const server = app.listen(PORT, () => {
       winston.info(`🚀 Server is running on port ${PORT}`);
