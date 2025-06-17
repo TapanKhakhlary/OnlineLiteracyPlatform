@@ -19,153 +19,311 @@ const toobusy = require('toobusy-js');
 const apicache = require('apicache');
 const { v4: uuidv4 } = require('uuid');
 const winston = require('./config/logger');
+const cluster = require('cluster');
+const os = require('os');
+const crypto = require('crypto');
 
-// Load environment variables
+// Enhanced environment variable handling
 require('dotenv').config();
+//require('./config/env-validation')(); // Add validation for critical env vars
 
-// DB connection
+// DB connection with retry logic
 require('./config/db')();
 
 const routes = require('./routes');
 const { notFound, errorHandler } = require('./middleware/errorMiddleware');
 const requestLogger = require('./middleware/requestLogger');
+const authLimiter = require('./middleware/authLimiter');
 
 // Express app
 const app = express();
 const cache = apicache.middleware;
 
-// ========== 1. SECURITY ==========
+// ========== 0. CLUSTER MODE (PRODUCTION ONLY) ==========
+if (process.env.NODE_ENV === 'production' && cluster.isPrimary) {
+  const numCPUs = os.cpus().length;
+  winston.info(`Master ${process.pid} is running`);
+
+  // Fork workers
+  for (let i = 0; i < numCPUs; i++) {
+    cluster.fork();
+  }
+
+  cluster.on('exit', (worker, code, signal) => {
+    winston.error(`Worker ${worker.process.pid} died with code ${code}`);
+    cluster.fork(); // Restart worker
+  });
+  
+  return;
+}
+
+// ========== 1. SECURITY MIDDLEWARE ==========
 app.set('trust proxy', 1);
+
+// Enhanced Helmet configuration
 app.use(helmet({
-  contentSecurityPolicy: false,
+  contentSecurityPolicy: {
+    directives: {
+      defaultSrc: ["'self'"],
+      scriptSrc: ["'self'", "'unsafe-inline'", process.env.TRUSTED_DOMAINS || ''],
+      styleSrc: ["'self'", "'unsafe-inline'", 'https://fonts.googleapis.com'],
+      imgSrc: ["'self'", 'data:', 'https://*.amazonaws.com'],
+      fontSrc: ["'self'", 'https://fonts.gstatic.com'],
+      connectSrc: ["'self'", process.env.API_BASE_URL || ''],
+      frameSrc: ["'self'"],
+      objectSrc: ["'none'"]
+    }
+  },
   crossOriginOpenerPolicy: { policy: "same-origin" },
   crossOriginResourcePolicy: { policy: "same-site" },
-  referrerPolicy: { policy: "same-origin" }
+  referrerPolicy: { policy: "strict-origin-when-cross-origin" },
+  hsts: {
+    maxAge: 63072000,
+    includeSubDomains: true,
+    preload: true
+  }
 }));
 
-// Unique request ID
+// Request ID and security headers
 app.use((req, res, next) => {
   req.id = uuidv4();
+  res.set({
+    'X-Request-ID': req.id,
+    'X-Content-Type-Options': 'nosniff',
+    'X-Frame-Options': 'DENY',
+    'X-XSS-Protection': '1; mode=block',
+    'Strict-Transport-Security': 'max-age=63072000; includeSubDomains; preload'
+  });
   next();
 });
 
-// Toobusy protection
+// Server load protection
 app.use((req, res, next) => {
   if (toobusy()) {
     winston.warn(`Server busy: ${req.method} ${req.originalUrl}`);
     return res.status(503).json({
       status: 'error',
       message: 'Server is too busy. Try again later.',
-      requestId: req.id
+      requestId: req.id,
+      retryAfter: '30'
     });
   }
   next();
 });
 
-// Rate Limiting and Slowdown
+// Rate Limiting
 const apiLimiter = rateLimit({
   windowMs: 15 * 60 * 1000,
   max: process.env.NODE_ENV === 'development' ? 1000 : 100,
   standardHeaders: true,
   legacyHeaders: false,
   skip: req => req.path === '/api/health',
-  message: (req, res) => ({
-    status: 'error',
-    message: 'Too many requests, try again later.',
-    requestId: req.id
-  }),
+  handler: (req, res) => {
+    winston.warn(`Rate limit exceeded for ${req.ip} on ${req.path}`);
+    res.status(429).json({
+      status: 'error',
+      message: 'Too many requests, please try again later.',
+      requestId: req.id,
+      retryAfter: 15 * 60
+    });
+  }
 });
 
 const speedLimiter = slowDown({
   windowMs: 15 * 60 * 1000,
-  delayAfter: 100,
-  delayMs: () => 500, // ✅ 500ms delay after 100 requests
-  validate: {
-    delayMs: false // ✅ silences the warning
-  }
+  delayAfter: 50,
+  delayMs: (hits) => hits * 100,
+  maxDelayMs: 5000
 });
 
-// CORS
+// Enhanced CORS configuration
 const corsOptions = {
   origin: process.env.CORS_ORIGINS?.split(',') || ['http://localhost:3000'],
   methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With', 'Accept', 'x-auth-token', 'x-request-id'],
+  allowedHeaders: [
+    'Content-Type', 
+    'Authorization', 
+    'X-Requested-With', 
+    'Accept', 
+    'x-auth-token', 
+    'x-request-id',
+    'x-forwarded-for'
+  ],
   credentials: true,
-  optionsSuccessStatus: 200,
-  exposedHeaders: ['x-auth-token', 'x-request-id']
+  optionsSuccessStatus: 204,
+  exposedHeaders: [
+    'x-auth-token', 
+    'x-request-id',
+    'x-response-time',
+    'x-rate-limit-remaining'
+  ],
+  maxAge: 86400
 };
 
 app.use(cors(corsOptions));
 app.options('*', cors(corsOptions));
 
-// ========== 2. PERFORMANCE & LOGGING ==========
-app.use(compression({ level: 6 }));
+// ========== 2. PERFORMANCE OPTIMIZATIONS ==========
+app.use(compression({
+  level: 6,
+  threshold: '1kb',
+  filter: (req, res) => {
+    if (req.headers['x-no-compression']) return false;
+    return compression.filter(req, res);
+  }
+}));
+
 app.use(responseTime());
 app.use(requestLogger);
 
-if (process.env.NODE_ENV === 'development') {
-  app.use(morgan('dev'));
-} else {
-  app.use(morgan('combined', { stream: winston.stream }));
-}
+// Enhanced logging
+const morganFormat = process.env.NODE_ENV === 'development' ? 'dev' : 'combined';
+const morganOptions = {
+  stream: winston.stream,
+  skip: (req) => req.path === '/api/health'
+};
+
+app.use(morgan(morganFormat, morganOptions));
 
 // ========== 3. REQUEST PROCESSING ==========
-app.use(express.json({ limit: '10kb' }));
-app.use(express.urlencoded({ extended: true, limit: '10kb' }));
-app.use(cookieParser(process.env.COOKIE_SECRET));
+app.use(express.json({
+  limit: '10kb',
+  verify: (req, res, buf) => {
+    req.rawBody = buf.toString(); // For webhook verification
+  }
+}));
 
-app.use(mongoSanitize());
+app.use(express.urlencoded({
+  extended: true,
+  limit: '10kb',
+  parameterLimit: 50
+}));
+
+app.use(cookieParser(process.env.COOKIE_SECRET, {
+  httpOnly: true,
+  secure: process.env.NODE_ENV === 'production',
+  sameSite: 'strict',
+  maxAge: 86400000,
+  signed: true
+}));
+
+// Security middleware
+app.use(mongoSanitize({
+  replaceWith: '_'
+}));
+
 app.use(xss());
-app.use(hpp());
+app.use(hpp({
+  whitelist: ['filter', 'sort', 'limit', 'page']
+}));
 
-// CSRF (only if using session auth)
+// CSRF protection (conditional)
 if (process.env.AUTH_STRATEGY === 'session') {
   app.use(csrf({
     cookie: {
       httpOnly: true,
       sameSite: 'strict',
-      secure: process.env.NODE_ENV === 'production'
-    }
+      secure: process.env.NODE_ENV === 'production',
+      signed: true
+    },
+    value: (req) => req.headers['x-csrf-token'] || req.body._csrf
   }));
+  
+  // Add CSRF token to responses
+  app.use((req, res, next) => {
+    res.cookie('XSRF-TOKEN', req.csrfToken(), {
+      secure: process.env.NODE_ENV === 'production',
+      sameSite: 'strict'
+    });
+    next();
+  });
 }
 
 // ========== 4. ROUTES ==========
-// Health check
-app.get('/api/health', (req, res) => {
-  res.status(200).json({
-    status: 'OK',
-    uptime: process.uptime(),
-    timestamp: new Date().toISOString(),
-    database: mongoose.connection.readyState === 1 ? 'connected' : 'disconnected',
-    environment: process.env.NODE_ENV,
-    requestId: req.id
-  });
+// Enhanced health check with DB ping
+app.get('/api/health', async (req, res) => {
+  try {
+    await mongoose.connection.db.admin().ping();
+    res.status(200).json({
+      status: 'OK',
+      uptime: process.uptime(),
+      timestamp: new Date().toISOString(),
+      database: 'connected',
+      environment: process.env.NODE_ENV,
+      memoryUsage: process.memoryUsage(),
+      loadAvg: process.getLoadAvg?.() || 'N/A',
+      requestId: req.id
+    });
+  } catch (err) {
+    res.status(503).json({
+      status: 'error',
+      message: 'Database connection failed',
+      error: err.message,
+      requestId: req.id
+    });
+  }
 });
 
-// Swagger Docs
+// Swagger Docs with versioning
 const swaggerOptions = require('./config/swagger');
 const swaggerSpec = swaggerJsdoc(swaggerOptions);
 
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec, {
   explorer: true,
-  customSiteTitle: 'Literacy Platform API Docs',
+  customSiteTitle: `${process.env.APP_NAME || 'API'} Documentation`,
   swaggerOptions: {
     persistAuthorization: true,
-    docExpansion: 'list'
+    docExpansion: 'none',
+    defaultModelsExpandDepth: -1,
+    filter: true,
+    validatorUrl: null
+  },
+  customCss: '.swagger-ui .topbar { display: none }',
+  customfavIcon: '/public/favicon.ico'
+}));
+
+// Cache configuration
+const onlyStatus200 = (req, res) => res.statusCode === 200;
+const cacheSuccesses = cache('5 minutes', onlyStatus200);
+
+// API routes with versioning and caching
+app.use('/api/v1', apiLimiter, speedLimiter, cacheSuccesses, routes);
+
+// Authentication routes with stricter rate limiting
+app.use('/api/v1/auth', authLimiter, require('./routes/auth'));
+
+// Static files with cache control
+app.use('/public', express.static(path.join(__dirname, 'public'), {
+  maxAge: '1y',
+  immutable: true,
+  setHeaders: (res, path) => {
+    if (path.endsWith('.webp')) {
+      res.setHeader('Content-Type', 'image/webp');
+    }
   }
 }));
 
-// Cache GET requests
-app.use(cache('5 minutes', req => req.method === 'GET'));
-
-// API routes
-app.use('/api/v1', apiLimiter, speedLimiter, routes);
-
-// Serve frontend in production
+// Serve frontend in production with proper caching
 if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, '../../client/build')));
+  app.use(express.static(path.join(__dirname, '../../client/build'), {
+    maxAge: '1h',
+    etag: true,
+    lastModified: true,
+    setHeaders: (res, path) => {
+      if (path.endsWith('.html')) {
+        res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
+      }
+    }
+  }));
+
   app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '../../client/build', 'index.html'));
+    res.sendFile(path.join(__dirname, '../../client/build', 'index.html'), {
+      cacheControl: false,
+      headers: {
+        'X-Frame-Options': 'DENY',
+        'X-Content-Type-Options': 'nosniff'
+      }
+    });
   });
 }
 
@@ -176,17 +334,35 @@ app.use(errorHandler);
 // ========== 6. PROCESS HANDLERS ==========
 process.on('unhandledRejection', (err) => {
   winston.error(`Unhandled Rejection: ${err.stack || err}`);
-  if (process.env.NODE_ENV === 'development') console.error(err);
+  if (process.env.NODE_ENV === 'development') {
+    console.error('Unhandled Rejection:', err);
+  }
 });
 
 process.on('uncaughtException', (err) => {
   winston.error(`Uncaught Exception: ${err.stack || err}`);
-  if (process.env.NODE_ENV === 'development') console.error(err);
-  process.exit(1);
+  if (process.env.NODE_ENV === 'development') {
+    console.error('Uncaught Exception:', err);
+  }
+  // Graceful shutdown
+  server.close(() => {
+    process.exit(1);
+  });
 });
 
+// Graceful shutdown handlers
 process.on('SIGTERM', () => {
-  winston.info('SIGTERM received. Shutting down...');
+  winston.info('SIGTERM received. Shutting down gracefully...');
+  server.close(() => {
+    mongoose.connection.close(false, () => {
+      winston.info('MongoDB connection closed.');
+      process.exit(0);
+    });
+  });
+});
+
+process.on('SIGINT', () => {
+  winston.info('SIGINT received. Shutting down...');
   server.close(() => {
     mongoose.connection.close(false, () => {
       winston.info('MongoDB connection closed.');
