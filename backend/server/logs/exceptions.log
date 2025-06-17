@@ -53,3 +53,6 @@
     at parse (D:\test project 3\online-literacy-platform\backend\server\node_modules\path-to-regexp\dist\index.js:183:20)
     at D:\test project 3\online-literacy-platform\backend\server\node_modules\path-to-regexp\dist\index.js:294:74
     at Array.map (<anonymous>)
+[2025-06-18 03:42:08] [31merror[39m: ReferenceError: server is not defined
+    at process.<anonymous> (D:\test project 3\online-literacy-platform\backend\server\app.js:366:3)
+    at process.emit (node:events:536:35)
