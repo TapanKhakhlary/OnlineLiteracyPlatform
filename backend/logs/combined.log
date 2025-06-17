@@ -126,3 +126,50 @@
 [2025-06-17 11:32:58] [32minfo[39m: 🔄 Connecting to MongoDB...
 [2025-06-17 11:32:58] [32minfo[39m: MONGO_URI: mongodb://localhost:27017/literacy-platform?connectTimeoutMS=5000
 [2025-06-17 11:32:58] [32minfo[39m: ✅ MongoDB Connected...
+[2025-06-17 12:30:27] [32minfo[39m: 🔄 Connecting to MongoDB...
+[2025-06-17 12:30:27] [32minfo[39m: MONGO_URI: mongodb://localhost:27017/literacy-platform?connectTimeoutMS=5000
+[2025-06-17 12:30:27] [32minfo[39m: ✅ MongoDB Connected...
+[2025-06-17 12:30:40] [31merror[39m: Error: Not found - GET /
+    at notFound (D:\test project 3\online-literacy-platform\backend\middleware\errorMiddleware.js:6:17)
+    at Layer.handle [as handle_request] (D:\test project 3\online-literacy-platform\backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\test project 3\online-literacy-platform\backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\test project 3\online-literacy-platform\backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\test project 3\online-literacy-platform\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\test project 3\online-literacy-platform\backend\node_modules\express\lib\router\index.js:280:10)
+    at makeResponseCacheable (D:\test project 3\online-literacy-platform\backend\node_modules\apicache\src\apicache.js:242:5)
+    at cache (D:\test project 3\online-literacy-platform\backend\node_modules\apicache\src\apicache.js:689:16)
+    at Layer.handle [as handle_request] (D:\test project 3\online-literacy-platform\backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\test project 3\online-literacy-platform\backend\node_modules\express\lib\router\index.js:328:13)
+[2025-06-17 12:30:40] [32minfo[39m: Request completed
+[2025-06-17 12:30:40] [32minfo[39m: ::1 - - [17/Jun/2025:07:00:40 +0000] "GET / HTTP/1.1" 404 58 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+[2025-06-17 13:14:04] [32minfo[39m: ::1 - - [17/Jun/2025:07:44:04 +0000] "GET /api/health HTTP/1.1" 200 284 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+[2025-06-17 13:20:35] [32minfo[39m: 🔄 Connecting to MongoDB...
+[2025-06-17 13:20:35] [32minfo[39m: MONGO_URI: mongodb://localhost:27017/literacy-platform?connectTimeoutMS=5000
+[2025-06-17 13:20:35] [32minfo[39m: ✅ MongoDB Connected...
+[2025-06-17 13:22:01] [31merror[39m: Error: Not found - GET /api/auth/register
+    at notFound (D:\test project 3\online-literacy-platform\backend\middleware\errorMiddleware.js:6:17)
+    at Layer.handle [as handle_request] (D:\test project 3\online-literacy-platform\backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\test project 3\online-literacy-platform\backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\test project 3\online-literacy-platform\backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\test project 3\online-literacy-platform\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\test project 3\online-literacy-platform\backend\node_modules\express\lib\router\index.js:280:10)
+    at makeResponseCacheable (D:\test project 3\online-literacy-platform\backend\node_modules\apicache\src\apicache.js:242:5)
+    at cache (D:\test project 3\online-literacy-platform\backend\node_modules\apicache\src\apicache.js:689:16)
+    at Layer.handle [as handle_request] (D:\test project 3\online-literacy-platform\backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\test project 3\online-literacy-platform\backend\node_modules\express\lib\router\index.js:328:13)
+[2025-06-17 13:22:01] [32minfo[39m: Request completed
+[2025-06-17 13:22:01] [32minfo[39m: ::1 - - [17/Jun/2025:07:52:01 +0000] "GET /api/auth/register HTTP/1.1" 404 75 "-" "PostmanRuntime/7.44.0"
+[2025-06-17 13:22:19] [32minfo[39m: ::1 - - [17/Jun/2025:07:52:19 +0000] "GET /api/health HTTP/1.1" 200 282 "-" "PostmanRuntime/7.44.0"
+[2025-06-17 13:27:57] [31merror[39m: Error: Not found - POST /api/auth/register
+    at notFound (D:\test project 3\online-literacy-platform\backend\middleware\errorMiddleware.js:6:17)
+    at Layer.handle [as handle_request] (D:\test project 3\online-literacy-platform\backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\test project 3\online-literacy-platform\backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\test project 3\online-literacy-platform\backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\test project 3\online-literacy-platform\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\test project 3\online-literacy-platform\backend\node_modules\express\lib\router\index.js:280:10)
+    at makeResponseCacheable (D:\test project 3\online-literacy-platform\backend\node_modules\apicache\src\apicache.js:242:5)
+    at cache (D:\test project 3\online-literacy-platform\backend\node_modules\apicache\src\apicache.js:689:16)
+    at Layer.handle [as handle_request] (D:\test project 3\online-literacy-platform\backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\test project 3\online-literacy-platform\backend\node_modules\express\lib\router\index.js:328:13)
+[2025-06-17 13:27:57] [32minfo[39m: Request completed
+[2025-06-17 13:27:57] [32minfo[39m: ::1 - - [17/Jun/2025:07:57:57 +0000] "POST /api/auth/register HTTP/1.1" 404 76 "-" "PostmanRuntime/7.44.0"

@@ -135,3 +135,36 @@
 [2025-06-16 23:33:28] [31merror[39m: ❌ MongoDB connection error: getaddrinfo ENOTFOUND mongo
 [2025-06-17 00:46:20] [31merror[39m: ❌ MongoDB connection error: getaddrinfo ENOTFOUND mongo
 [2025-06-17 00:51:30] [31merror[39m: ❌ MongoDB connection error: getaddrinfo ENOTFOUND mongo
+[2025-06-17 12:30:40] [31merror[39m: Error: Not found - GET /
+    at notFound (D:\test project 3\online-literacy-platform\backend\middleware\errorMiddleware.js:6:17)
+    at Layer.handle [as handle_request] (D:\test project 3\online-literacy-platform\backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\test project 3\online-literacy-platform\backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\test project 3\online-literacy-platform\backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\test project 3\online-literacy-platform\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\test project 3\online-literacy-platform\backend\node_modules\express\lib\router\index.js:280:10)
+    at makeResponseCacheable (D:\test project 3\online-literacy-platform\backend\node_modules\apicache\src\apicache.js:242:5)
+    at cache (D:\test project 3\online-literacy-platform\backend\node_modules\apicache\src\apicache.js:689:16)
+    at Layer.handle [as handle_request] (D:\test project 3\online-literacy-platform\backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\test project 3\online-literacy-platform\backend\node_modules\express\lib\router\index.js:328:13)
+[2025-06-17 13:22:01] [31merror[39m: Error: Not found - GET /api/auth/register
+    at notFound (D:\test project 3\online-literacy-platform\backend\middleware\errorMiddleware.js:6:17)
+    at Layer.handle [as handle_request] (D:\test project 3\online-literacy-platform\backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\test project 3\online-literacy-platform\backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\test project 3\online-literacy-platform\backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\test project 3\online-literacy-platform\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\test project 3\online-literacy-platform\backend\node_modules\express\lib\router\index.js:280:10)
+    at makeResponseCacheable (D:\test project 3\online-literacy-platform\backend\node_modules\apicache\src\apicache.js:242:5)
+    at cache (D:\test project 3\online-literacy-platform\backend\node_modules\apicache\src\apicache.js:689:16)
+    at Layer.handle [as handle_request] (D:\test project 3\online-literacy-platform\backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\test project 3\online-literacy-platform\backend\node_modules\express\lib\router\index.js:328:13)
+[2025-06-17 13:27:57] [31merror[39m: Error: Not found - POST /api/auth/register
+    at notFound (D:\test project 3\online-literacy-platform\backend\middleware\errorMiddleware.js:6:17)
+    at Layer.handle [as handle_request] (D:\test project 3\online-literacy-platform\backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\test project 3\online-literacy-platform\backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\test project 3\online-literacy-platform\backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\test project 3\online-literacy-platform\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\test project 3\online-literacy-platform\backend\node_modules\express\lib\router\index.js:280:10)
+    at makeResponseCacheable (D:\test project 3\online-literacy-platform\backend\node_modules\apicache\src\apicache.js:242:5)
+    at cache (D:\test project 3\online-literacy-platform\backend\node_modules\apicache\src\apicache.js:689:16)
+    at Layer.handle [as handle_request] (D:\test project 3\online-literacy-platform\backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\test project 3\online-literacy-platform\backend\node_modules\express\lib\router\index.js:328:13)
