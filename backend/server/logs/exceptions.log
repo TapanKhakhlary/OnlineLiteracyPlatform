@@ -56,3 +56,12 @@
 [2025-06-18 03:42:08] [31merror[39m: ReferenceError: server is not defined
     at process.<anonymous> (D:\test project 3\online-literacy-platform\backend\server\app.js:366:3)
     at process.emit (node:events:536:35)
+[2025-06-18 11:41:09] [31merror[39m: ReferenceError: server is not defined
+    at process.<anonymous> (D:\test project 3\online-literacy-platform\backend\server\app.js:366:3)
+    at process.emit (node:events:536:35)
+[2025-06-18 21:24:36] [31merror[39m: ReferenceError: server is not defined
+    at process.<anonymous> (D:\test project 3\online-literacy-platform\backend\server\app.js:366:3)
+    at process.emit (node:events:536:35)
+[2025-06-18 21:24:54] [31merror[39m: ReferenceError: server is not defined
+    at process.<anonymous> (D:\test project 3\online-literacy-platform\backend\server\app.js:366:3)
+    at process.emit (node:events:536:35)
