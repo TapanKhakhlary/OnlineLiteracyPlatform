@@ -11,3 +11,17 @@
 [2025-06-18 21:24:36] [31merror[39m: Uncaught Exception: ReferenceError: server is not defined
     at process.<anonymous> (D:\test project 3\online-literacy-platform\backend\server\app.js:366:3)
     at process.emit (node:events:536:35)
+[2025-06-18 23:09:15] [31merror[39m: Error: Not found - POST /api/auth/register
+    at notFound (D:\test project 3\online-literacy-platform\backend\server\middleware\errorMiddleware.js:6:17)
+    at Layer.handle [as handle_request] (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:328:13)
+    at D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:280:10)
+    at hpp (D:\test project 3\online-literacy-platform\backend\node_modules\hpp\lib\index.js:146:9)
+    at Layer.handle [as handle_request] (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:328:13)
+    at D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:286:9
+[2025-06-18 23:18:05] [31merror[39m: Uncaught Exception: ReferenceError: server is not defined
+    at process.<anonymous> (D:\test project 3\online-literacy-platform\backend\server\app.js:366:3)
+    at process.emit (node:events:536:35)

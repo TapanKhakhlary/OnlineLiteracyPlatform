@@ -137,22 +137,33 @@ const speedLimiter = slowDown({
 });
 
 // Enhanced CORS configuration
+// 🔐 Dynamic CORS configuration with safe fallback
 const corsOptions = {
-  origin: process.env.CORS_ORIGINS?.split(',') || ['http://localhost:3000'],
+  origin: function (origin, callback) {
+    const allowedOrigins = (process.env.CORS_ORIGINS || 'http://localhost:3000').split(',');
+
+    // Allow requests with no origin (e.g., mobile apps, curl)
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      winston.warn(`❌ CORS blocked request from origin: ${origin}`);
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
   methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
   allowedHeaders: [
-    'Content-Type', 
-    'Authorization', 
-    'X-Requested-With', 
-    'Accept', 
-    'x-auth-token', 
+    'Content-Type',
+    'Authorization',
+    'X-Requested-With',
+    'Accept',
+    'x-auth-token',
     'x-request-id',
     'x-forwarded-for'
   ],
   credentials: true,
   optionsSuccessStatus: 204,
   exposedHeaders: [
-    'x-auth-token', 
+    'x-auth-token',
     'x-request-id',
     'x-response-time',
     'x-rate-limit-remaining'
@@ -162,6 +173,7 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 app.options('*', cors(corsOptions));
+
 
 // ========== 2. PERFORMANCE OPTIMIZATIONS ==========
 app.use(compression({

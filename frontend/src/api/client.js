@@ -6,7 +6,7 @@ import { logout } from '../utils/auth'; // Your logout utility function
 const api = axios.create({
   baseURL: process.env.REACT_APP_API_URL || 'http://localhost:5000/api/v1', // Explicit default
   timeout: 30000, // Increased timeout
-  withCredentials: false, // Set to true if using cookies
+  withCredentials: true, // Set to true if using cookies
   headers: {
     'Content-Type': 'application/json',
     'Accept': 'application/json',
