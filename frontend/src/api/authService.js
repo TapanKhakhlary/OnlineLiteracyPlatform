@@ -30,7 +30,7 @@ const removeToken = () => {
 // Auth API methods
 export const login = async (credentials) => {
   try {
-    const response = await api.post('/auth/login', credentials);
+    const response = await api.post('/api/v1/auth/login', credentials);
 
     // Store the token
     if (response.data.token) {
@@ -46,7 +46,7 @@ export const login = async (credentials) => {
 
 export const register = async (userData) => {
   try {
-    const response = await api.post('/auth/register', userData);
+    const response = await api.post('/api/v1/auth/register', userData);
 
     // Auto-login after registration if token is returned
     if (response.data.token) {
@@ -61,7 +61,7 @@ export const register = async (userData) => {
 
 export const getCurrentUser = async () => {
   try {
-    const response = await api.get('/auth/me');
+    const response = await api.get('/api/v1/auth/me');
     return response.data;
   } catch (error) {
     // If unauthorized, clear the invalid token

@@ -97,7 +97,18 @@ const Register = () => {
       navigate('/login');
     } catch (error) {
       console.error('Register Error:', error);
-      setSubmitError(error.message || 'Registration failed. Please try again.');
+      // Check if the error is a network error (common with Axios)
+      if (error.message === 'Network Error') {
+        setSubmitError(
+          'Could not connect to the server. Please check your internet connection or try again later.'
+        );
+      } else if (error.response && error.response.data && error.response.data.message) {
+        // Handle errors with a response from the server
+        setSubmitError(error.response.data.message);
+      } else {
+        // Generic error handling
+        setSubmitError(error.message || 'Registration failed. Please try again.');
+      }
     }
   };
 
