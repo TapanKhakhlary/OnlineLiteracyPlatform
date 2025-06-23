@@ -219,3 +219,291 @@
 [2025-06-19 12:26:57] [32minfo[39m: ::1 - - [19/Jun/2025:06:56:57 +0000] "POST /api/v1/auth/register HTTP/1.1" 400 29 "-" "PostmanRuntime/7.44.1"
 [2025-06-19 12:27:00] [32minfo[39m: Request completed
 [2025-06-19 12:27:00] [32minfo[39m: ::1 - - [19/Jun/2025:06:57:00 +0000] "POST /api/v1/auth/login HTTP/1.1" 200 217 "-" "PostmanRuntime/7.44.1"
+[2025-06-19 13:10:56] [32minfo[39m: SIGINT received. Shutting down...
+[2025-06-19 13:11:10] [32minfo[39m: 🔄 Connecting to MongoDB...
+[2025-06-19 13:11:10] [32minfo[39m: MONGO_URI: mongodb://localhost:27017/literacy-platform?connectTimeoutMS=5000
+[2025-06-19 13:11:10] [32minfo[39m: 🚀 Server running in development mode on port 5001
+[2025-06-19 13:11:10] [32minfo[39m: ✅ MongoDB Connected...
+[2025-06-19 13:11:15] [32minfo[39m: SIGINT received. Shutting down...
+[2025-06-19 13:11:20] [32minfo[39m: 🔄 Connecting to MongoDB...
+[2025-06-19 13:11:20] [32minfo[39m: MONGO_URI: mongodb://localhost:27017/literacy-platform?connectTimeoutMS=5000
+[2025-06-19 13:11:21] [32minfo[39m: 🚀 Server running in development mode on port 5001
+[2025-06-19 13:11:21] [32minfo[39m: ✅ MongoDB Connected...
+[2025-06-19 13:11:26] [32minfo[39m: 🔄 Connecting to MongoDB...
+[2025-06-19 13:11:26] [32minfo[39m: MONGO_URI: mongodb://localhost:27017/?connectTimeoutMS=5000
+[2025-06-19 13:11:26] [32minfo[39m: 🚀 Server running in development mode on port 5000
+[2025-06-19 13:11:26] [32minfo[39m: ✅ MongoDB Connected...
+[2025-06-19 13:14:16] [32minfo[39m: Request completed
+[2025-06-19 13:14:16] [32minfo[39m: ::1 - - [19/Jun/2025:07:44:16 +0000] "POST /api/v1/auth/register HTTP/1.1" 400 29 "-" "PostmanRuntime/7.44.1"
+[2025-06-19 13:14:19] [32minfo[39m: Request completed
+[2025-06-19 13:14:19] [32minfo[39m: ::1 - - [19/Jun/2025:07:44:19 +0000] "POST /api/v1/auth/login HTTP/1.1" 200 217 "-" "PostmanRuntime/7.44.1"
+[2025-06-19 13:33:51] [32minfo[39m: SIGINT received. Shutting down...
+[2025-06-19 13:34:01] [32minfo[39m: 🔄 Connecting to MongoDB...
+[2025-06-19 13:34:01] [32minfo[39m: MONGO_URI: mongodb://localhost:27017/literacy-platform?connectTimeoutMS=5000
+[2025-06-19 13:34:01] [32minfo[39m: 🚀 Server running in development mode on port 5001
+[2025-06-19 13:34:01] [32minfo[39m: ✅ MongoDB Connected...
+[2025-06-19 13:34:04] [32minfo[39m: SIGINT received. Shutting down...
+[2025-06-19 13:34:11] [32minfo[39m: 🔄 Connecting to MongoDB...
+[2025-06-19 13:34:11] [32minfo[39m: MONGO_URI: mongodb://localhost:27017/literacy-platform?connectTimeoutMS=5000
+[2025-06-19 13:34:11] [32minfo[39m: 🚀 Server running in development mode on port 5001
+[2025-06-19 13:34:11] [32minfo[39m: ✅ MongoDB Connected...
+[2025-06-19 13:34:14] [32minfo[39m: 🔄 Connecting to MongoDB...
+[2025-06-19 13:34:14] [32minfo[39m: MONGO_URI: mongodb://localhost:27017/?connectTimeoutMS=5000
+[2025-06-19 13:34:14] [32minfo[39m: 🚀 Server running in development mode on port 5000
+[2025-06-19 13:34:14] [32minfo[39m: ✅ MongoDB Connected...
+[2025-06-19 13:37:17] [32minfo[39m: Request completed
+[2025-06-19 13:37:17] [32minfo[39m: [0mPOST /api/v1/auth/register [32m200[0m 120.703 ms - 217[0m
+[2025-06-19 13:37:37] [32minfo[39m: Request completed
+[2025-06-19 13:37:37] [32minfo[39m: [0mPOST /api/v1/auth/register [32m200[0m 1.793 ms - 217[0m
+[2025-06-19 13:44:13] [32minfo[39m: Request completed
+[2025-06-19 13:44:13] [32minfo[39m: ::1 - - [19/Jun/2025:08:14:13 +0000] "GET /api/v1/auth/me HTTP/1.1" 200 215 "-" "PostmanRuntime/7.44.1"
+[2025-06-19 13:45:22] [32minfo[39m: Request completed
+[2025-06-19 13:45:22] [32minfo[39m: [0mPOST /api/v1/auth/register [33m400[0m 6.649 ms - 29[0m
+[2025-06-19 13:46:43] [32minfo[39m: Request completed
+[2025-06-19 13:46:43] [32minfo[39m: [0mPOST /api/v1/auth/login [33m400[0m 69.845 ms - 29[0m
+[2025-06-19 13:46:56] [31merror[39m: Error: Not found - GET /api/v1/auth/google
+    at notFound (D:\test project 3\online-literacy-platform\backend\server\middleware\errorMiddleware.js:6:17)
+    at Layer.handle [as handle_request] (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:328:13)
+    at D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:280:10)
+    at D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:646:15
+    at next (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:265:14)
+    at Function.handle (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:175:3)
+    at router (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:47:12)
+[2025-06-19 13:46:56] [32minfo[39m: Request completed
+[2025-06-19 13:46:56] [32minfo[39m: [0mGET /api/v1/auth/google [33m404[0m 3.700 ms - -[0m
+[2025-06-19 13:46:56] [31merror[39m: Error: Not found - GET /favicon.ico
+    at notFound (D:\test project 3\online-literacy-platform\backend\server\middleware\errorMiddleware.js:6:17)
+    at Layer.handle [as handle_request] (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:328:13)
+    at D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:280:10)
+    at hpp (D:\test project 3\online-literacy-platform\backend\node_modules\hpp\lib\index.js:146:9)
+    at Layer.handle [as handle_request] (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:328:13)
+    at D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:286:9
+[2025-06-19 13:46:56] [32minfo[39m: Request completed
+[2025-06-19 13:46:56] [32minfo[39m: [0mGET /favicon.ico [33m404[0m 1.994 ms - -[0m
+[2025-06-19 13:48:36] [32minfo[39m: Request completed
+[2025-06-19 13:48:36] [32minfo[39m: ::1 - - [19/Jun/2025:08:18:36 +0000] "POST /api/v1/auth/register HTTP/1.1" 400 29 "-" "PostmanRuntime/7.44.1"
+[2025-06-19 13:48:45] [32minfo[39m: Request completed
+[2025-06-19 13:48:45] [32minfo[39m: ::1 - - [19/Jun/2025:08:18:45 +0000] "POST /api/v1/auth/login HTTP/1.1" 200 217 "-" "PostmanRuntime/7.44.1"
+[2025-06-19 13:48:49] [32minfo[39m: Request completed
+[2025-06-19 13:48:49] [32minfo[39m: ::1 - - [19/Jun/2025:08:18:49 +0000] "GET /api/v1/auth/me HTTP/1.1" 200 215 "-" "PostmanRuntime/7.44.1"
+[2025-06-19 14:00:33] [32minfo[39m: 🔄 Connecting to MongoDB...
+[2025-06-19 14:00:33] [32minfo[39m: MONGO_URI: mongodb://localhost:27017/literacy-platform?connectTimeoutMS=5000
+[2025-06-19 14:00:34] [32minfo[39m: 🚀 Server running in development mode on port 5001
+[2025-06-19 14:00:34] [32minfo[39m: ✅ MongoDB Connected...
+[2025-06-19 14:00:33] [32minfo[39m: 🔄 Connecting to MongoDB...
+[2025-06-19 14:00:33] [32minfo[39m: MONGO_URI: mongodb://localhost:27017/?connectTimeoutMS=5000
+[2025-06-19 14:00:34] [32minfo[39m: 🚀 Server running in development mode on port 5000
+[2025-06-19 14:00:34] [32minfo[39m: ✅ MongoDB Connected...
+[2025-06-19 14:01:28] [32minfo[39m: 🔄 Connecting to MongoDB...
+[2025-06-19 14:01:28] [32minfo[39m: MONGO_URI: mongodb://localhost:27017/literacy-platform?connectTimeoutMS=5000
+[2025-06-19 14:01:28] [32minfo[39m: 🚀 Server running in development mode on port 5001
+[2025-06-19 14:01:28] [32minfo[39m: ✅ MongoDB Connected...
+[2025-06-19 14:01:28] [32minfo[39m: 🔄 Connecting to MongoDB...
+[2025-06-19 14:01:28] [32minfo[39m: MONGO_URI: mongodb://localhost:27017/?connectTimeoutMS=5000
+[2025-06-19 14:01:28] [32minfo[39m: 🚀 Server running in development mode on port 5000
+[2025-06-19 14:01:28] [32minfo[39m: ✅ MongoDB Connected...
+[2025-06-19 14:01:54] [32minfo[39m: 🔄 Connecting to MongoDB...
+[2025-06-19 14:01:54] [32minfo[39m: MONGO_URI: mongodb://localhost:27017/literacy-platform?connectTimeoutMS=5000
+[2025-06-19 14:01:54] [32minfo[39m: 🚀 Server running in development mode on port 5001
+[2025-06-19 14:01:55] [32minfo[39m: ✅ MongoDB Connected...
+[2025-06-19 14:01:54] [32minfo[39m: 🔄 Connecting to MongoDB...
+[2025-06-19 14:01:54] [32minfo[39m: MONGO_URI: mongodb://localhost:27017/?connectTimeoutMS=5000
+[2025-06-19 14:01:55] [32minfo[39m: 🚀 Server running in development mode on port 5000
+[2025-06-19 14:01:55] [32minfo[39m: ✅ MongoDB Connected...
+[2025-06-19 14:01:57] [32minfo[39m: SIGINT received. Shutting down...
+[2025-06-19 14:02:12] [32minfo[39m: 🔄 Connecting to MongoDB...
+[2025-06-19 14:02:12] [32minfo[39m: MONGO_URI: mongodb://localhost:27017/literacy-platform?connectTimeoutMS=5000
+[2025-06-19 14:02:12] [32minfo[39m: 🚀 Server running in development mode on port 5001
+[2025-06-19 14:02:12] [32minfo[39m: ✅ MongoDB Connected...
+[2025-06-19 14:02:16] [32minfo[39m: SIGINT received. Shutting down...
+[2025-06-19 14:02:31] [32minfo[39m: 🔄 Connecting to MongoDB...
+[2025-06-19 14:02:31] [32minfo[39m: MONGO_URI: mongodb://localhost:27017/literacy-platform?connectTimeoutMS=5000
+[2025-06-19 14:02:31] [32minfo[39m: 🚀 Server running in development mode on port 5001
+[2025-06-19 14:02:31] [32minfo[39m: ✅ MongoDB Connected...
+[2025-06-19 14:02:37] [32minfo[39m: 🔄 Connecting to MongoDB...
+[2025-06-19 14:02:37] [32minfo[39m: MONGO_URI: mongodb://localhost:27017/?connectTimeoutMS=5000
+[2025-06-19 14:02:37] [32minfo[39m: 🚀 Server running in development mode on port 5000
+[2025-06-19 14:02:37] [32minfo[39m: ✅ MongoDB Connected...
+[2025-06-19 14:05:41] [32minfo[39m: Request completed
+[2025-06-19 14:05:41] [32minfo[39m: [0mPOST /api/v1/auth/register [33m400[0m 34.267 ms - 29[0m
+[2025-06-19 14:17:48] [32minfo[39m: SIGINT received. Shutting down...
+[2025-06-19 14:18:01] [32minfo[39m: 🔄 Connecting to MongoDB...
+[2025-06-19 14:18:01] [32minfo[39m: MONGO_URI: mongodb://localhost:27017/literacy-platform?connectTimeoutMS=5000
+[2025-06-19 14:18:01] [32minfo[39m: 🚀 Server running in development mode on port 5001
+[2025-06-19 14:18:01] [32minfo[39m: ✅ MongoDB Connected...
+[2025-06-19 14:18:06] [32minfo[39m: SIGINT received. Shutting down...
+[2025-06-19 14:18:11] [32minfo[39m: 🔄 Connecting to MongoDB...
+[2025-06-19 14:18:11] [32minfo[39m: MONGO_URI: mongodb://localhost:27017/literacy-platform?connectTimeoutMS=5000
+[2025-06-19 14:18:11] [32minfo[39m: 🚀 Server running in development mode on port 5001
+[2025-06-19 14:18:11] [32minfo[39m: ✅ MongoDB Connected...
+[2025-06-19 14:18:13] [32minfo[39m: 🔄 Connecting to MongoDB...
+[2025-06-19 14:18:13] [32minfo[39m: MONGO_URI: mongodb://localhost:27017/?connectTimeoutMS=5000
+[2025-06-19 14:18:13] [32minfo[39m: 🚀 Server running in development mode on port 5000
+[2025-06-19 14:18:13] [32minfo[39m: ✅ MongoDB Connected...
+[2025-06-19 14:19:29] [32minfo[39m: Request completed
+[2025-06-19 14:19:29] [32minfo[39m: ::1 - - [19/Jun/2025:08:49:29 +0000] "POST /api/v1/auth/register HTTP/1.1" 400 29 "-" "PostmanRuntime/7.44.1"
+[2025-06-19 14:19:32] [32minfo[39m: Request completed
+[2025-06-19 14:19:32] [32minfo[39m: ::1 - - [19/Jun/2025:08:49:32 +0000] "POST /api/v1/auth/login HTTP/1.1" 200 217 "-" "PostmanRuntime/7.44.1"
+[2025-06-19 14:19:55] [32minfo[39m: Request completed
+[2025-06-19 14:19:55] [32minfo[39m: ::1 - - [19/Jun/2025:08:49:55 +0000] "GET /api/v1/auth/me HTTP/1.1" 200 215 "-" "PostmanRuntime/7.44.1"
+[2025-06-19 14:20:38] [32minfo[39m: Request completed
+[2025-06-19 14:20:38] [32minfo[39m: [0mPOST /api/v1/auth/register [33m400[0m 31.529 ms - 29[0m
+[2025-06-19 14:20:51] [32minfo[39m: Request completed
+[2025-06-19 14:20:51] [32minfo[39m: [0mPOST /api/v1/auth/register [33m400[0m 5.339 ms - 29[0m
+[2025-06-19 14:21:03] [32minfo[39m: Request completed
+[2025-06-19 14:21:03] [32minfo[39m: [0mPOST /api/v1/auth/register [33m400[0m 5.157 ms - 29[0m
+[2025-06-19 14:27:29] [32minfo[39m: Request completed
+[2025-06-19 14:27:29] [32minfo[39m: ::1 - - [19/Jun/2025:08:57:29 +0000] "POST /api/v1/auth/register HTTP/1.1" 400 29 "-" "PostmanRuntime/7.44.1"
+[2025-06-19 14:27:31] [32minfo[39m: Request completed
+[2025-06-19 14:27:31] [32minfo[39m: ::1 - - [19/Jun/2025:08:57:31 +0000] "POST /api/v1/auth/register HTTP/1.1" 400 29 "-" "PostmanRuntime/7.44.1"
+[2025-06-19 14:27:36] [32minfo[39m: Request completed
+[2025-06-19 14:27:36] [32minfo[39m: ::1 - - [19/Jun/2025:08:57:36 +0000] "POST /api/v1/auth/login HTTP/1.1" 200 217 "-" "PostmanRuntime/7.44.1"
+[2025-06-19 14:27:53] [32minfo[39m: Request completed
+[2025-06-19 14:27:53] [32minfo[39m: ::1 - - [19/Jun/2025:08:57:53 +0000] "GET /api/v1/auth/me HTTP/1.1" 401 28 "-" "PostmanRuntime/7.44.1"
+[2025-06-19 14:27:59] [32minfo[39m: Request completed
+[2025-06-19 14:27:59] [32minfo[39m: ::1 - - [19/Jun/2025:08:57:59 +0000] "POST /api/v1/auth/login HTTP/1.1" 200 217 "-" "PostmanRuntime/7.44.1"
+[2025-06-19 14:28:15] [32minfo[39m: Request completed
+[2025-06-19 14:28:15] [32minfo[39m: ::1 - - [19/Jun/2025:08:58:15 +0000] "GET /api/v1/auth/me HTTP/1.1" 200 215 "-" "PostmanRuntime/7.44.1"
+[2025-06-19 14:31:11] [32minfo[39m: 🔄 Connecting to MongoDB...
+[2025-06-19 14:31:11] [32minfo[39m: MONGO_URI: mongodb://localhost:27017/literacy-platform?connectTimeoutMS=5000
+[2025-06-19 14:31:11] [32minfo[39m: 🚀 Server running in development mode on port 5001
+[2025-06-19 14:31:11] [32minfo[39m: ✅ MongoDB Connected...
+[2025-06-19 14:31:11] [32minfo[39m: 🔄 Connecting to MongoDB...
+[2025-06-19 14:31:11] [32minfo[39m: MONGO_URI: mongodb://localhost:27017/?connectTimeoutMS=5000
+[2025-06-19 14:31:11] [32minfo[39m: 🚀 Server running in development mode on port 5000
+[2025-06-19 14:31:11] [32minfo[39m: ✅ MongoDB Connected...
+[2025-06-19 14:31:16] [32minfo[39m: 🔄 Connecting to MongoDB...
+[2025-06-19 14:31:16] [32minfo[39m: MONGO_URI: mongodb://localhost:27017/literacy-platform?connectTimeoutMS=5000
+[2025-06-19 14:31:16] [32minfo[39m: 🚀 Server running in development mode on port 5001
+[2025-06-19 14:31:16] [32minfo[39m: ✅ MongoDB Connected...
+[2025-06-19 14:31:16] [32minfo[39m: 🔄 Connecting to MongoDB...
+[2025-06-19 14:31:16] [32minfo[39m: MONGO_URI: mongodb://localhost:27017/?connectTimeoutMS=5000
+[2025-06-19 14:31:16] [32minfo[39m: 🚀 Server running in development mode on port 5000
+[2025-06-19 14:31:16] [32minfo[39m: ✅ MongoDB Connected...
+[2025-06-19 14:33:11] [32minfo[39m: SIGINT received. Shutting down...
+[2025-06-19 14:33:22] [32minfo[39m: 🔄 Connecting to MongoDB...
+[2025-06-19 14:33:22] [32minfo[39m: MONGO_URI: mongodb://localhost:27017/literacy-platform?connectTimeoutMS=5000
+[2025-06-19 14:33:22] [32minfo[39m: 🚀 Server running in development mode on port 5001
+[2025-06-19 14:33:22] [32minfo[39m: ✅ MongoDB Connected...
+[2025-06-19 14:33:25] [32minfo[39m: SIGINT received. Shutting down...
+[2025-06-19 14:33:31] [32minfo[39m: 🔄 Connecting to MongoDB...
+[2025-06-19 14:33:31] [32minfo[39m: MONGO_URI: mongodb://localhost:27017/literacy-platform?connectTimeoutMS=5000
+[2025-06-19 14:33:31] [32minfo[39m: 🚀 Server running in development mode on port 5001
+[2025-06-19 14:33:31] [32minfo[39m: ✅ MongoDB Connected...
+[2025-06-19 14:33:34] [32minfo[39m: 🔄 Connecting to MongoDB...
+[2025-06-19 14:33:34] [32minfo[39m: MONGO_URI: mongodb://localhost:27017/?connectTimeoutMS=5000
+[2025-06-19 14:33:34] [32minfo[39m: 🚀 Server running in development mode on port 5000
+[2025-06-19 14:33:34] [32minfo[39m: ✅ MongoDB Connected...
+[2025-06-19 14:35:27] [32minfo[39m: Request completed
+[2025-06-19 14:35:27] [32minfo[39m: [0mPOST /api/v1/auth/register [33m400[0m 35.501 ms - 29[0m
+[2025-06-22 10:09:42] [32minfo[39m: 🔄 Connecting to MongoDB...
+[2025-06-22 10:09:42] [32minfo[39m: MONGO_URI: mongodb://localhost:27017/literacy-platform?connectTimeoutMS=5000
+[2025-06-22 10:09:42] [32minfo[39m: 🚀 Server running in development mode on port 5001
+[2025-06-22 10:09:42] [32minfo[39m: ✅ MongoDB Connected...
+[2025-06-22 10:10:03] [32minfo[39m: 🔄 Connecting to MongoDB...
+[2025-06-22 10:10:03] [32minfo[39m: MONGO_URI: mongodb://localhost:27017/literacy-platform?connectTimeoutMS=5000
+[2025-06-22 10:10:03] [32minfo[39m: 🚀 Server running in development mode on port 5001
+[2025-06-22 10:10:03] [32minfo[39m: ✅ MongoDB Connected...
+[2025-06-22 10:10:07] [32minfo[39m: 🔄 Connecting to MongoDB...
+[2025-06-22 10:10:07] [32minfo[39m: MONGO_URI: mongodb://localhost:27017/?connectTimeoutMS=5000
+[2025-06-22 10:10:07] [32minfo[39m: 🚀 Server running in development mode on port 5000
+[2025-06-22 10:10:07] [32minfo[39m: ✅ MongoDB Connected...
+[2025-06-22 10:13:29] [32minfo[39m: Request completed
+[2025-06-22 10:13:29] [32minfo[39m: [0mPOST /api/v1/auth/register [33m400[0m 176.047 ms - 29[0m
+[2025-06-22 10:26:12] [32minfo[39m: Request completed
+[2025-06-22 10:26:12] [32minfo[39m: [0mPOST /api/v1/auth/register [33m400[0m 4.747 ms - 29[0m
+[2025-06-22 10:26:22] [32minfo[39m: Request completed
+[2025-06-22 10:26:22] [32minfo[39m: [0mPOST /api/v1/auth/register [33m400[0m 5.987 ms - 29[0m
+[2025-06-22 10:28:07] [32minfo[39m: Request completed
+[2025-06-22 10:28:07] [32minfo[39m: [0mPOST /api/v1/auth/login [32m200[0m 97.617 ms - 217[0m
+[2025-06-22 10:30:08] [32minfo[39m: Request completed
+[2025-06-22 10:30:08] [32minfo[39m: [0mPOST /api/v1/auth/login [32m200[0m 1.377 ms - 217[0m
+[2025-06-22 10:35:06] [32minfo[39m: Request completed
+[2025-06-22 10:35:06] [32minfo[39m: [0mPOST /api/v1/auth/login [32m200[0m 74.338 ms - 217[0m
+[2025-06-22 10:36:11] [32minfo[39m: Request completed
+[2025-06-22 10:36:11] [32minfo[39m: ::1 - - [22/Jun/2025:05:06:11 +0000] "POST /api/v1/auth/login HTTP/1.1" 200 217 "-" "PostmanRuntime/7.44.1"
+[2025-06-22 10:36:16] [32minfo[39m: Request completed
+[2025-06-22 10:36:16] [32minfo[39m: ::1 - - [22/Jun/2025:05:06:16 +0000] "POST /api/v1/auth/register HTTP/1.1" 400 29 "-" "PostmanRuntime/7.44.1"
+[2025-06-22 10:36:19] [32minfo[39m: Request completed
+[2025-06-22 10:36:19] [32minfo[39m: ::1 - - [22/Jun/2025:05:06:19 +0000] "GET /api/v1/auth/me HTTP/1.1" 200 215 "-" "PostmanRuntime/7.44.1"
+[2025-06-22 10:47:45] [32minfo[39m: Request completed
+[2025-06-22 10:47:45] [32minfo[39m: [0mPOST /api/v1/auth/login [32m200[0m 71.354 ms - 217[0m
+[2025-06-22 10:48:31] [32minfo[39m: Request completed
+[2025-06-22 10:48:31] [32minfo[39m: [0mPOST /api/v1/auth/login [32m200[0m 1.518 ms - 217[0m
+[2025-06-22 10:55:52] [32minfo[39m: Request completed
+[2025-06-22 10:55:52] [32minfo[39m: [0mPOST /api/v1/auth/login [32m200[0m 72.342 ms - 217[0m
+[2025-06-22 11:03:01] [32minfo[39m: Request completed
+[2025-06-22 11:03:01] [32minfo[39m: [0mPOST /api/v1/auth/login [32m200[0m 70.088 ms - 217[0m
+[2025-06-22 11:23:47] [32minfo[39m: SIGINT received. Shutting down...
+[2025-06-22 11:24:17] [32minfo[39m: 🔄 Connecting to MongoDB...
+[2025-06-22 11:24:17] [32minfo[39m: MONGO_URI: mongodb://localhost:27017/literacy-platform?connectTimeoutMS=5000
+[2025-06-22 11:24:18] [32minfo[39m: 🚀 Server running in development mode on port 5001
+[2025-06-22 11:24:18] [32minfo[39m: ✅ MongoDB Connected...
+[2025-06-22 11:24:28] [32minfo[39m: SIGINT received. Shutting down...
+[2025-06-22 11:24:35] [32minfo[39m: 🔄 Connecting to MongoDB...
+[2025-06-22 11:24:35] [32minfo[39m: MONGO_URI: mongodb://localhost:27017/literacy-platform?connectTimeoutMS=5000
+[2025-06-22 11:24:35] [32minfo[39m: 🚀 Server running in development mode on port 5001
+[2025-06-22 11:24:36] [32minfo[39m: ✅ MongoDB Connected...
+[2025-06-22 11:24:40] [32minfo[39m: 🔄 Connecting to MongoDB...
+[2025-06-22 11:24:40] [32minfo[39m: MONGO_URI: mongodb://localhost:27017/?connectTimeoutMS=5000
+[2025-06-22 11:24:41] [32minfo[39m: 🚀 Server running in development mode on port 5000
+[2025-06-22 11:24:41] [32minfo[39m: ✅ MongoDB Connected...
+[2025-06-22 11:46:32] [31merror[39m: Error: Not found - GET /api/v1/auth/google
+    at notFound (D:\test project 3\online-literacy-platform\backend\server\middleware\errorMiddleware.js:4:17)
+    at Layer.handle [as handle_request] (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:328:13)
+    at D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:280:10)
+    at D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:646:15
+    at next (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:265:14)
+    at Function.handle (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:175:3)
+    at router (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:47:12)
+[2025-06-22 11:46:32] [32minfo[39m: Request completed
+[2025-06-22 11:46:32] [32minfo[39m: [0mGET /api/v1/auth/google [33m404[0m 9.903 ms - -[0m
+[2025-06-22 11:46:32] [31merror[39m: Error: Not found - GET /favicon.ico
+    at notFound (D:\test project 3\online-literacy-platform\backend\server\middleware\errorMiddleware.js:4:17)
+    at Layer.handle [as handle_request] (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:328:13)
+    at D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:280:10)
+    at hpp (D:\test project 3\online-literacy-platform\backend\node_modules\hpp\lib\index.js:146:9)
+    at Layer.handle [as handle_request] (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:328:13)
+    at D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:286:9
+[2025-06-22 11:46:32] [32minfo[39m: Request completed
+[2025-06-22 11:46:32] [32minfo[39m: [0mGET /favicon.ico [33m404[0m 2.024 ms - -[0m
+[2025-06-22 11:47:06] [32minfo[39m: Request completed
+[2025-06-22 11:47:06] [32minfo[39m: [0mPOST /api/v1/auth/login [32m200[0m 109.756 ms - 217[0m
+[2025-06-22 12:17:22] [32minfo[39m: 🔄 Connecting to MongoDB...
+[2025-06-22 12:17:22] [32minfo[39m: MONGO_URI: mongodb://localhost:27017/literacy-platform?connectTimeoutMS=5000
+[2025-06-22 12:17:22] [32minfo[39m: 🚀 Server running in development mode on port 5001
+[2025-06-22 12:17:22] [32minfo[39m: ✅ MongoDB Connected...
+[2025-06-22 12:17:22] [32minfo[39m: 🔄 Connecting to MongoDB...
+[2025-06-22 12:17:22] [32minfo[39m: MONGO_URI: mongodb://localhost:27017/?connectTimeoutMS=5000
+[2025-06-22 12:17:22] [32minfo[39m: 🚀 Server running in development mode on port 5000
+[2025-06-22 12:17:22] [32minfo[39m: ✅ MongoDB Connected...
+[2025-06-22 12:19:19] [32minfo[39m: SIGINT received. Shutting down...
+[2025-06-22 12:20:35] [32minfo[39m: 🔄 Connecting to MongoDB...
+[2025-06-22 12:20:35] [32minfo[39m: MONGO_URI: mongodb://localhost:27017/literacy-platform?connectTimeoutMS=5000
+[2025-06-22 12:20:35] [32minfo[39m: 🚀 Server running in development mode on port 5001
+[2025-06-22 12:20:35] [32minfo[39m: ✅ MongoDB Connected...
+[2025-06-22 12:20:39] [32minfo[39m: SIGINT received. Shutting down...
+[2025-06-22 12:20:46] [32minfo[39m: 🔄 Connecting to MongoDB...
+[2025-06-22 12:20:46] [32minfo[39m: MONGO_URI: mongodb://localhost:27017/literacy-platform?connectTimeoutMS=5000
+[2025-06-22 12:20:46] [32minfo[39m: 🚀 Server running in development mode on port 5001
+[2025-06-22 12:20:46] [32minfo[39m: ✅ MongoDB Connected...
+[2025-06-22 12:20:48] [32minfo[39m: 🔄 Connecting to MongoDB...
+[2025-06-22 12:20:48] [32minfo[39m: MONGO_URI: mongodb://localhost:27017/?connectTimeoutMS=5000
+[2025-06-22 12:20:48] [32minfo[39m: 🚀 Server running in development mode on port 5000
+[2025-06-22 12:20:48] [32minfo[39m: ✅ MongoDB Connected...
+[2025-06-22 12:22:21] [32minfo[39m: Request completed
+[2025-06-22 12:22:21] [32minfo[39m: [0mPOST /api/v1/auth/login [32m200[0m 120.062 ms - 335[0m

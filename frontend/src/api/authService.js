@@ -2,11 +2,16 @@ import api from './api';
 
 // Helper function to handle errors consistently
 const handleError = (error) => {
-  // Extract error message from backend or use default
+  console.error('❌ API Error:', {
+    url: error.config?.url,
+    method: error.config?.method,
+    status: error.response?.status,
+    data: error.response?.data,
+  });
+
   const message =
     error.response?.data?.msg || error.response?.data?.message || error.message || 'Request failed';
 
-  // Create error object with consistent structure
   const err = new Error(message);
   err.status = error.response?.status;
   err.details = error.response?.data?.errors || null;
@@ -30,44 +35,47 @@ const removeToken = () => {
 // Auth API methods
 export const login = async (credentials) => {
   try {
-    const response = await api.post('/api/v1/auth/login', credentials);
+    const response = await api.post('/auth/login', credentials);
 
-    // Store the token
-    if (response.data.token) {
-      storeToken(response.data.token);
+    const token = response?.data?.token;
+    if (token) {
+      storeToken(token);
     }
-
-    // Return user data
     return response.data;
   } catch (error) {
+    // eslint-disable-next-line no-console
+    console.error('❌ Full Error Object:', error);
     return handleError(error);
   }
 };
 
 export const register = async (userData) => {
   try {
-    const response = await api.post('/api/v1/auth/register', userData);
+    const response = await api.post('/auth/register', userData);
 
-    // Auto-login after registration if token is returned
-    if (response.data.token) {
-      storeToken(response.data.token);
+    const token = response?.data?.token;
+    if (token) {
+      storeToken(token);
     }
 
     return response.data;
   } catch (error) {
+    // eslint-disable-next-line no-console
+    console.error('❌ Full Error Object:', error);
     return handleError(error);
   }
 };
 
 export const getCurrentUser = async () => {
   try {
-    const response = await api.get('/api/v1/auth/me');
+    const response = await api.get('/auth/me');
     return response.data;
   } catch (error) {
     // If unauthorized, clear the invalid token
     if (error.response?.status === 401) {
       removeToken();
     }
+    console.error('❌ Full Error Object:', error);
     return handleError(error);
   }
 };

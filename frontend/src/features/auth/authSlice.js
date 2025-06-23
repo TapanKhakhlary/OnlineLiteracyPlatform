@@ -38,7 +38,7 @@ const authSlice = createSlice({
       .addCase(loginUser.fulfilled, (state, action) => {
         state.status = 'succeeded';
         state.token = action.payload.token;
-        // You might want to decode the JWT to get user info
+        state.user = action.payload.user;
       })
       .addCase(loginUser.rejected, (state, action) => {
         state.status = 'failed';

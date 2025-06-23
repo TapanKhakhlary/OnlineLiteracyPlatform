@@ -20,15 +20,12 @@ export default function Login() {
   const [showPassword, setShowPassword] = useState(false);
   const [rememberMe, setRememberMe] = useState(false);
 
-  // Redirect if coming from protected route
   const from = location.state?.from?.pathname || '/dashboard';
 
   useEffect(() => {
-    // Check for remembered credentials
     const rememberedEmail = localStorage.getItem('rememberedEmail');
     if (rememberedEmail) {
       setRememberMe(true);
-      // You might want to pre-fill the email field here
     }
   }, []);
 
@@ -37,7 +34,6 @@ export default function Login() {
       const resultAction = await dispatch(loginUser(data));
 
       if (loginUser.fulfilled.match(resultAction)) {
-        // Handle remember me functionality
         if (rememberMe) {
           localStorage.setItem('rememberedEmail', data.email);
         } else {
@@ -47,12 +43,11 @@ export default function Login() {
         toast.success('Login successful!');
         navigate(from, { replace: true });
       }
-    } catch (err) {
-      // Error is already handled in the slice
+    } catch {
+      // Error handled globally
     }
   };
 
-  // Social login handlers
   const handleGoogleLogin = () => {
     window.location.href = `${process.env.REACT_APP_API_URL}/auth/google`;
   };
@@ -65,8 +60,8 @@ export default function Login() {
     <div className="auth-container">
       <div className="auth-card">
         <div className="auth-header">
-          <h2>Welcome Back</h2>
-          <p>Please enter your credentials to login</p>
+          <h2 className="text-2xl font-bold">Welcome Back</h2>
+          <p className="text-sm text-gray-600">Please enter your credentials to login</p>
           {error && <div className="auth-error-message">{error}</div>}
         </div>
 
@@ -79,13 +74,13 @@ export default function Login() {
                 {...register('email', {
                   required: 'Email is required',
                   pattern: {
-                    value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                    value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
                     message: 'Invalid email address',
                   },
                 })}
                 id="email"
                 type="email"
-                placeholder="Enter your email"
+                placeholder="Email address"
                 autoComplete="username"
               />
             </div>
@@ -106,7 +101,7 @@ export default function Login() {
                 })}
                 id="password"
                 type={showPassword ? 'text' : 'password'}
-                placeholder="Enter your password"
+                placeholder="Password"
                 autoComplete="current-password"
               />
               <button
@@ -122,15 +117,15 @@ export default function Login() {
           </div>
 
           <div className="form-options">
-            <div className="remember-me">
+            <label className="remember-me">
               <input
                 type="checkbox"
                 id="remember"
                 checked={rememberMe}
                 onChange={(e) => setRememberMe(e.target.checked)}
               />
-              <label htmlFor="remember">Remember me</label>
-            </div>
+              Remember me
+            </label>
             <Link to="/forgot-password" className="forgot-password">
               Forgot password?
             </Link>
@@ -175,7 +170,7 @@ export default function Login() {
           </div>
 
           <div className="auth-footer">
-            Don't have an account? <Link to="/register">Sign up</Link>
+            Don’t have an account? <Link to="/register">Sign up</Link>
           </div>
         </form>
       </div>

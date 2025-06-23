@@ -3,9 +3,8 @@ import { toast } from 'react-toastify';
 
 // Configuration
 const API_URL = process.env.REACT_APP_API_URL || '/api'; // Using proxy in development
-const API_TIMEOUT = 10000; // 10 seconds timeout
+const API_TIMEOUT = 10000; // 10 seconds timeout // Add this for sanity check
 
-// Create axios instance
 const api = axios.create({
   baseURL: API_URL,
   timeout: API_TIMEOUT,
