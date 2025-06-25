@@ -39,7 +39,16 @@ exports.register = async (req, res, next) => {
         email: user.email,
         role: user.role
       };
-      res.json({ token, user: userResponse });
+      res.json({
+      token,
+      user: {
+        id: user.id,
+        username: user.username,
+        email: user.email,
+        role: user.role
+      }
+      });
+
     });
   } catch (err) {
     console.error('❌ Registration Error:', err);
@@ -82,7 +91,16 @@ exports.login = async (req, res, next) => {
         email: user.email,
         role: user.role
       };
-      res.json({ token, user: userResponse });
+      res.json({
+        token,
+        user: {
+          id: user.id,
+          username: user.username,
+          email: user.email,
+          role: user.role
+        }
+      });
+
     });
   } catch (err) {
     winston.error(err.message);
