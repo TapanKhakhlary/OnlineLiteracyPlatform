@@ -6,7 +6,6 @@ import { loginUser } from '../features/auth/authSlice';
 import { FaUser, FaLock, FaGoogle, FaFacebook, FaEye, FaEyeSlash } from 'react-icons/fa';
 import { toast } from 'react-toastify';
 import './AuthPages.scss';
-
 export default function Login() {
   const {
     register,
@@ -55,7 +54,6 @@ export default function Login() {
   const handleFacebookLogin = () => {
     window.location.href = `${process.env.REACT_APP_API_URL}/auth/facebook`;
   };
-
   return (
     <div className="auth-container">
       <div className="auth-card">

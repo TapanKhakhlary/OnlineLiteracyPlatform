@@ -552,3 +552,7 @@
 [2025-06-25 21:59:27] [32minfo[39m: MONGO_URI: mongodb://localhost:27017/?connectTimeoutMS=5000
 [2025-06-25 21:59:27] [32minfo[39m: 🚀 Server running in development mode on port 5000
 [2025-06-25 21:59:27] [32minfo[39m: ✅ MongoDB Connected...
+[2025-06-25 22:01:12] [32minfo[39m: Request completed
+[2025-06-25 22:01:12] [32minfo[39m: [0mPOST /api/v1/auth/login [32m200[0m 115.238 ms - 335[0m
+[2025-06-25 22:48:17] [32minfo[39m: Request completed
+[2025-06-25 22:48:17] [32minfo[39m: [0mPOST /api/v1/auth/login [32m200[0m 79.728 ms - 335[0m

@@ -5,28 +5,50 @@ export const loginUser = createAsyncThunk(
   'auth/login',
   async (credentials, { rejectWithValue }) => {
     try {
-      const response = await login(credentials);
+      const response = await login(credentials); // Store token in localStorage if rememberMe is true
+      if (credentials.rememberMe) {
+        localStorage.setItem('authToken', response.token);
+      }
       return response;
     } catch (error) {
-      return rejectWithValue(error.message);
+      // Handle different error formats
+      const errorMessage =
+        error.response?.data?.message || error.message || 'Login failed. Please try again.';
+      return rejectWithValue(errorMessage);
     }
   }
 );
 
+const initialState = {
+  user: null,
+  token: null,
+  status: 'idle',
+  error: null,
+  isAuthenticated: false,
+};
+
 const authSlice = createSlice({
   name: 'auth',
-  initialState: {
-    user: null,
-    token: null,
-    status: 'idle', // 'idle' | 'loading' | 'succeeded' | 'failed'
-    error: null,
-  },
+  initialState,
   reducers: {
     logout: (state) => {
+      localStorage.removeItem('authToken');
       state.user = null;
       state.token = null;
       state.status = 'idle';
       state.error = null;
+      state.isAuthenticated = false;
+    },
+    resetAuthState: (state) => {
+      state.status = 'idle';
+      state.error = null;
+    },
+    initializeAuth: (state) => {
+      const token = localStorage.getItem('authToken');
+      if (token) {
+        state.token = token;
+        state.isAuthenticated = true;
+      }
     },
   },
   extraReducers: (builder) => {
@@ -38,14 +60,17 @@ const authSlice = createSlice({
       .addCase(loginUser.fulfilled, (state, action) => {
         state.status = 'succeeded';
         state.token = action.payload.token;
-        state.user = action.payload.user || null;
+        state.user = action.payload.user;
+        state.isAuthenticated = true;
+        state.error = null;
       })
       .addCase(loginUser.rejected, (state, action) => {
         state.status = 'failed';
         state.error = action.payload;
+        state.isAuthenticated = false;
       });
   },
 });
 
-export const { logout } = authSlice.actions;
+export const { logout, resetAuthState, initializeAuth } = authSlice.actions;
 export default authSlice.reducer;
