@@ -12,7 +12,7 @@ const CourseSchema = new mongoose.Schema({
   },
   thumbnail: {
     type: String,
-    required: true
+    required: false
   },
   instructor: {
     type: mongoose.Schema.Types.ObjectId,
@@ -22,7 +22,7 @@ const CourseSchema = new mongoose.Schema({
   category: {
     type: String,
     required: true,
-    enum: ['beginner', 'intermediate', 'advanced']
+    enum: ['Beginner', 'Intermediate', 'Advanced', 'English', 'Math', 'Science', 'History'],
   },
   lessons: [{
     type: mongoose.Schema.Types.ObjectId,

@@ -23,44 +23,36 @@ const cluster = require('cluster');
 const os = require('os');
 const crypto = require('crypto');
 
-// Enhanced environment variable handling
 require('dotenv').config();
-//require('./config/env-validation')(); // Add validation for critical env vars
-
-// DB connection with retry logic
 require('./config/db')();
 
 const routes = require('./routes');
+const courseRoutes = require('./routes/courseRoutes'); // ✅ Added
 const { notFound, errorHandler } = require('./middleware/errorMiddleware');
 const requestLogger = require('./middleware/requestLogger');
 const authLimiter = require('./middleware/authLimiter');
 
-// Express app
 const app = express();
 const cache = apicache.middleware;
 
-// ========== 0. CLUSTER MODE (PRODUCTION ONLY) ==========
 if (process.env.NODE_ENV === 'production' && cluster.isPrimary) {
   const numCPUs = os.cpus().length;
   winston.info(`Master ${process.pid} is running`);
 
-  // Fork workers
   for (let i = 0; i < numCPUs; i++) {
     cluster.fork();
   }
 
   cluster.on('exit', (worker, code, signal) => {
     winston.error(`Worker ${worker.process.pid} died with code ${code}`);
-    cluster.fork(); // Restart worker
+    cluster.fork();
   });
-  
+
   return;
 }
 
-// ========== 1. SECURITY MIDDLEWARE ==========
 app.set('trust proxy', 1);
 
-// Enhanced Helmet configuration
 app.use(helmet({
   contentSecurityPolicy: {
     directives: {
@@ -84,7 +76,6 @@ app.use(helmet({
   }
 }));
 
-// Request ID and security headers
 app.use((req, res, next) => {
   req.id = uuidv4();
   res.set({
@@ -97,7 +88,6 @@ app.use((req, res, next) => {
   next();
 });
 
-// Server load protection
 app.use((req, res, next) => {
   if (toobusy()) {
     winston.warn(`Server busy: ${req.method} ${req.originalUrl}`);
@@ -111,7 +101,6 @@ app.use((req, res, next) => {
   next();
 });
 
-// Rate Limiting
 const apiLimiter = rateLimit({
   windowMs: 15 * 60 * 1000,
   max: process.env.NODE_ENV === 'development' ? 1000 : 100,
@@ -136,13 +125,9 @@ const speedLimiter = slowDown({
   maxDelayMs: 5000
 });
 
-// Enhanced CORS configuration
-// 🔐 Dynamic CORS configuration with safe fallback
 const corsOptions = {
   origin: function (origin, callback) {
     const allowedOrigins = (process.env.CORS_ORIGINS || 'http://localhost:3000').split(',');
-
-    // Allow requests with no origin (e.g., mobile apps, curl)
     if (!origin || allowedOrigins.includes(origin)) {
       callback(null, true);
     } else {
@@ -174,8 +159,6 @@ const corsOptions = {
 app.use(cors(corsOptions));
 app.options('*', cors(corsOptions));
 
-
-// ========== 2. PERFORMANCE OPTIMIZATIONS ==========
 app.use(compression({
   level: 6,
   threshold: '1kb',
@@ -188,7 +171,6 @@ app.use(compression({
 app.use(responseTime());
 app.use(requestLogger);
 
-// Enhanced logging
 const morganFormat = process.env.NODE_ENV === 'development' ? 'dev' : 'combined';
 const morganOptions = {
   stream: winston.stream,
@@ -197,11 +179,10 @@ const morganOptions = {
 
 app.use(morgan(morganFormat, morganOptions));
 
-// ========== 3. REQUEST PROCESSING ==========
 app.use(express.json({
   limit: '10kb',
   verify: (req, res, buf) => {
-    req.rawBody = buf.toString(); // For webhook verification
+    req.rawBody = buf.toString();
   }
 }));
 
@@ -219,17 +200,10 @@ app.use(cookieParser(process.env.COOKIE_SECRET, {
   signed: true
 }));
 
-// Security middleware
-app.use(mongoSanitize({
-  replaceWith: '_'
-}));
-
+app.use(mongoSanitize({ replaceWith: '_' }));
 app.use(xss());
-app.use(hpp({
-  whitelist: ['filter', 'sort', 'limit', 'page']
-}));
+app.use(hpp({ whitelist: ['filter', 'sort', 'limit', 'page'] }));
 
-// CSRF protection (conditional)
 if (process.env.AUTH_STRATEGY === 'session') {
   app.use(csrf({
     cookie: {
@@ -240,8 +214,7 @@ if (process.env.AUTH_STRATEGY === 'session') {
     },
     value: (req) => req.headers['x-csrf-token'] || req.body._csrf
   }));
-  
-  // Add CSRF token to responses
+
   app.use((req, res, next) => {
     res.cookie('XSRF-TOKEN', req.csrfToken(), {
       secure: process.env.NODE_ENV === 'production',
@@ -251,8 +224,6 @@ if (process.env.AUTH_STRATEGY === 'session') {
   });
 }
 
-// ========== 4. ROUTES ==========
-// Enhanced health check with DB ping
 app.get('/api/health', async (req, res) => {
   try {
     await mongoose.connection.db.admin().ping();
@@ -276,7 +247,6 @@ app.get('/api/health', async (req, res) => {
   }
 });
 
-// Swagger Docs with versioning
 const swaggerOptions = require('./config/swagger');
 const swaggerSpec = swaggerJsdoc(swaggerOptions);
 
@@ -294,17 +264,13 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec, {
   customfavIcon: '/public/favicon.ico'
 }));
 
-// Cache configuration
 const onlyStatus200 = (req, res) => res.statusCode === 200;
 const cacheSuccesses = cache('5 minutes', onlyStatus200);
 
-// API routes with versioning and caching
 app.use('/api/v1', apiLimiter, speedLimiter, cacheSuccesses, routes);
-
-// Authentication routes with stricter rate limiting
+app.use('/api/courses', courseRoutes); // ✅ Add course route here
 app.use('/api/v1/auth', authLimiter, require('./routes/auth'));
 
-// Static files with cache control
 app.use('/public', express.static(path.join(__dirname, 'public'), {
   maxAge: '1y',
   immutable: true,
@@ -315,7 +281,6 @@ app.use('/public', express.static(path.join(__dirname, 'public'), {
   }
 }));
 
-// Serve frontend in production with proper caching
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '../../client/build'), {
     maxAge: '1h',
@@ -339,11 +304,9 @@ if (process.env.NODE_ENV === 'production') {
   });
 }
 
-// ========== 5. ERROR HANDLING ==========
 app.use(notFound);
 app.use(errorHandler);
 
-// ========== 6. PROCESS HANDLERS ==========
 process.on('unhandledRejection', (err) => {
   winston.error(`Unhandled Rejection: ${err.stack || err}`);
   if (process.env.NODE_ENV === 'development') {
@@ -356,13 +319,11 @@ process.on('uncaughtException', (err) => {
   if (process.env.NODE_ENV === 'development') {
     console.error('Uncaught Exception:', err);
   }
-  // Graceful shutdown
   server.close(() => {
     process.exit(1);
   });
 });
 
-// Graceful shutdown handlers
 process.on('SIGTERM', () => {
   winston.info('SIGTERM received. Shutting down gracefully...');
   server.close(() => {

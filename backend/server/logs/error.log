@@ -118,3 +118,47 @@
     at Layer.handle [as handle_request] (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\layer.js:95:5)
     at trim_prefix (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:328:13)
     at D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:286:9
+[2025-06-28 00:27:50] [31merror[39m: Error: Not found - POST /api/v1/auth/courses
+    at notFound (D:\test project 3\online-literacy-platform\backend\server\middleware\errorMiddleware.js:4:17)
+    at Layer.handle [as handle_request] (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:328:13)
+    at D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:280:10)
+    at D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:646:15
+    at next (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:265:14)
+    at Function.handle (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:175:3)
+    at router (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:47:12)
+[2025-06-28 00:29:26] [31merror[39m: Error: Not found - POST /api/courses
+    at notFound (D:\test project 3\online-literacy-platform\backend\server\middleware\errorMiddleware.js:4:17)
+    at Layer.handle [as handle_request] (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:328:13)
+    at D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:280:10)
+    at hpp (D:\test project 3\online-literacy-platform\backend\node_modules\hpp\lib\index.js:146:9)
+    at Layer.handle [as handle_request] (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:328:13)
+    at D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:286:9
+[2025-06-28 01:25:06] [31merror[39m: Error: Not found - POST /api/v1/auth/courses
+    at notFound (D:\test project 3\online-literacy-platform\backend\server\middleware\errorMiddleware.js:4:17)
+    at Layer.handle [as handle_request] (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:328:13)
+    at D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:280:10)
+    at D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:646:15
+    at next (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:265:14)
+    at Function.handle (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:175:3)
+    at router (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:47:12)
+[2025-06-28 01:25:17] [31merror[39m: Error: Not found - POST /auth/courses
+    at notFound (D:\test project 3\online-literacy-platform\backend\server\middleware\errorMiddleware.js:4:17)
+    at Layer.handle [as handle_request] (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:328:13)
+    at D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:280:10)
+    at hpp (D:\test project 3\online-literacy-platform\backend\node_modules\hpp\lib\index.js:146:9)
+    at Layer.handle [as handle_request] (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:328:13)
+    at D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:286:9

@@ -50,7 +50,9 @@ exports.getCourse = async (req, res) => {
 exports.createCourse = async (req, res) => {
   try {
     const { title, description, category, price } = req.body;
-
+    // 🔍 Debug: Log instructor ID from token
+    console.log("Instructor ID from token:", req.user.id);
+   
     const course = new Course({
       title,
       description,
@@ -62,6 +64,7 @@ exports.createCourse = async (req, res) => {
     await course.save();
     res.status(201).json(course);
   } catch (err) {
+    console.error('❌ Course creation failed:', err);  // Add this line
     winston.error(err.message);
     res.status(500).send('Server error');
   }

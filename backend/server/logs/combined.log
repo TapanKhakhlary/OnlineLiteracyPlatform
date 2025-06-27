@@ -734,3 +734,317 @@
 [2025-06-27 23:32:43] [32minfo[39m: ::1 - - [27/Jun/2025:18:02:43 +0000] "GET /api/v1/courses/1 HTTP/1.1" 404 26 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
 [2025-06-27 23:32:43] [32minfo[39m: Request completed
 [2025-06-27 23:32:43] [32minfo[39m: ::1 - - [27/Jun/2025:18:02:43 +0000] "GET /api/v1/courses/1 HTTP/1.1" 404 26 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+[2025-06-28 00:27:50] [31merror[39m: Error: Not found - POST /api/v1/auth/courses
+    at notFound (D:\test project 3\online-literacy-platform\backend\server\middleware\errorMiddleware.js:4:17)
+    at Layer.handle [as handle_request] (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:328:13)
+    at D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:280:10)
+    at D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:646:15
+    at next (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:265:14)
+    at Function.handle (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:175:3)
+    at router (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:47:12)
+[2025-06-28 00:27:50] [32minfo[39m: Request completed
+[2025-06-28 00:27:50] [32minfo[39m: ::1 - - [27/Jun/2025:18:57:50 +0000] "POST /api/v1/auth/courses HTTP/1.1" 404 107 "-" "PostmanRuntime/7.44.1"
+[2025-06-28 00:29:26] [31merror[39m: Error: Not found - POST /api/courses
+    at notFound (D:\test project 3\online-literacy-platform\backend\server\middleware\errorMiddleware.js:4:17)
+    at Layer.handle [as handle_request] (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:328:13)
+    at D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:280:10)
+    at hpp (D:\test project 3\online-literacy-platform\backend\node_modules\hpp\lib\index.js:146:9)
+    at Layer.handle [as handle_request] (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:328:13)
+    at D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:286:9
+[2025-06-28 00:29:26] [32minfo[39m: Request completed
+[2025-06-28 00:29:26] [32minfo[39m: ::1 - - [27/Jun/2025:18:59:26 +0000] "POST /api/courses HTTP/1.1" 404 99 "-" "PostmanRuntime/7.44.1"
+[2025-06-28 00:37:27] [32minfo[39m: 🔄 Connecting to MongoDB...
+[2025-06-28 00:37:27] [32minfo[39m: MONGO_URI: mongodb://localhost:27017/literacy-platform?connectTimeoutMS=5000
+[2025-06-28 00:37:28] [32minfo[39m: 🚀 Server running in development mode on port 5001
+[2025-06-28 00:37:28] [32minfo[39m: ✅ MongoDB Connected...
+[2025-06-28 00:37:27] [32minfo[39m: 🔄 Connecting to MongoDB...
+[2025-06-28 00:37:27] [32minfo[39m: MONGO_URI: mongodb://localhost:27017/?connectTimeoutMS=5000
+[2025-06-28 00:37:28] [32minfo[39m: 🚀 Server running in development mode on port 5000
+[2025-06-28 00:37:28] [32minfo[39m: ✅ MongoDB Connected...
+[2025-06-28 00:39:24] [32minfo[39m: SIGINT received. Shutting down...
+[2025-06-28 00:39:36] [32minfo[39m: 🔄 Connecting to MongoDB...
+[2025-06-28 00:39:36] [32minfo[39m: MONGO_URI: mongodb://localhost:27017/literacy-platform?connectTimeoutMS=5000
+[2025-06-28 00:39:36] [32minfo[39m: 🚀 Server running in development mode on port 5001
+[2025-06-28 00:39:36] [32minfo[39m: ✅ MongoDB Connected...
+[2025-06-28 00:39:39] [32minfo[39m: SIGINT received. Shutting down...
+[2025-06-28 00:39:44] [32minfo[39m: 🔄 Connecting to MongoDB...
+[2025-06-28 00:39:44] [32minfo[39m: MONGO_URI: mongodb://localhost:27017/literacy-platform?connectTimeoutMS=5000
+[2025-06-28 00:39:44] [32minfo[39m: 🚀 Server running in development mode on port 5001
+[2025-06-28 00:39:44] [32minfo[39m: ✅ MongoDB Connected...
+[2025-06-28 00:39:47] [32minfo[39m: 🔄 Connecting to MongoDB...
+[2025-06-28 00:39:47] [32minfo[39m: MONGO_URI: mongodb://localhost:27017/?connectTimeoutMS=5000
+[2025-06-28 00:39:47] [32minfo[39m: 🚀 Server running in development mode on port 5000
+[2025-06-28 00:39:47] [32minfo[39m: ✅ MongoDB Connected...
+[2025-06-28 00:43:45] [32minfo[39m: Request completed
+[2025-06-28 00:43:45] [32minfo[39m: [0mPOST /api/courses [33m401[0m 186.596 ms - 40[0m
+[2025-06-28 00:44:22] [32minfo[39m: Request completed
+[2025-06-28 00:44:22] [32minfo[39m: ::1 - - [27/Jun/2025:19:14:22 +0000] "POST /api/courses HTTP/1.1" 401 40 "-" "PostmanRuntime/7.44.1"
+[2025-06-28 00:46:07] [32minfo[39m: Request completed
+[2025-06-28 00:46:07] [32minfo[39m: [0mPOST /api/courses [33m401[0m 0.946 ms - 40[0m
+[2025-06-28 00:46:14] [32minfo[39m: Request completed
+[2025-06-28 00:46:14] [32minfo[39m: ::1 - - [27/Jun/2025:19:16:14 +0000] "POST /api/courses HTTP/1.1" 401 40 "-" "PostmanRuntime/7.44.1"
+[2025-06-28 00:48:41] [32minfo[39m: Request completed
+[2025-06-28 00:48:41] [32minfo[39m: ::1 - - [27/Jun/2025:19:18:41 +0000] "POST /api/courses HTTP/1.1" 401 40 "-" "PostmanRuntime/7.44.1"
+[2025-06-28 00:48:48] [32minfo[39m: Request completed
+[2025-06-28 00:48:48] [32minfo[39m: ::1 - - [27/Jun/2025:19:18:48 +0000] "POST /api/courses HTTP/1.1" 401 40 "-" "PostmanRuntime/7.44.1"
+[2025-06-28 00:55:40] [32minfo[39m: 🔄 Connecting to MongoDB...
+[2025-06-28 00:55:40] [32minfo[39m: MONGO_URI: mongodb://localhost:27017/literacy-platform?connectTimeoutMS=5000
+[2025-06-28 00:55:40] [32minfo[39m: 🚀 Server running in development mode on port 5001
+[2025-06-28 00:55:40] [32minfo[39m: ✅ MongoDB Connected...
+[2025-06-28 00:55:47] [32minfo[39m: 🔄 Connecting to MongoDB...
+[2025-06-28 00:55:47] [32minfo[39m: MONGO_URI: mongodb://localhost:27017/literacy-platform?connectTimeoutMS=5000
+[2025-06-28 00:55:47] [32minfo[39m: 🚀 Server running in development mode on port 5001
+[2025-06-28 00:55:47] [32minfo[39m: ✅ MongoDB Connected...
+[2025-06-28 00:59:09] [32minfo[39m: 🔄 Connecting to MongoDB...
+[2025-06-28 00:59:09] [32minfo[39m: MONGO_URI: mongodb://localhost:27017/literacy-platform?connectTimeoutMS=5000
+[2025-06-28 00:59:09] [32minfo[39m: 🚀 Server running in development mode on port 5001
+[2025-06-28 00:59:09] [32minfo[39m: ✅ MongoDB Connected...
+[2025-06-28 01:01:18] [32minfo[39m: 🔄 Connecting to MongoDB...
+[2025-06-28 01:01:18] [32minfo[39m: MONGO_URI: mongodb://localhost:27017/literacy-platform?connectTimeoutMS=5000
+[2025-06-28 01:01:18] [32minfo[39m: 🚀 Server running in development mode on port 5001
+[2025-06-28 01:01:18] [32minfo[39m: ✅ MongoDB Connected...
+[2025-06-28 01:05:30] [32minfo[39m: 🔄 Connecting to MongoDB...
+[2025-06-28 01:05:30] [32minfo[39m: MONGO_URI: mongodb://localhost:27017/literacy-platform?connectTimeoutMS=5000
+[2025-06-28 01:05:30] [32minfo[39m: 🚀 Server running in development mode on port 5001
+[2025-06-28 01:05:30] [32minfo[39m: ✅ MongoDB Connected...
+[2025-06-28 01:08:27] [32minfo[39m: 🔄 Connecting to MongoDB...
+[2025-06-28 01:08:27] [32minfo[39m: MONGO_URI: mongodb://localhost:27017/literacy-platform?connectTimeoutMS=5000
+[2025-06-28 01:08:27] [32minfo[39m: 🚀 Server running in development mode on port 5001
+[2025-06-28 01:08:27] [32minfo[39m: ✅ MongoDB Connected...
+[2025-06-28 01:19:53] [32minfo[39m: Request completed
+[2025-06-28 01:19:53] [32minfo[39m: ::1 - - [27/Jun/2025:19:49:53 +0000] "POST /api/v1/auth/register HTTP/1.1" 200 324 "-" "PostmanRuntime/7.44.1"
+[2025-06-28 01:21:36] [32minfo[39m: Request completed
+[2025-06-28 01:21:36] [32minfo[39m: ::1 - - [27/Jun/2025:19:51:36 +0000] "POST /api/v1/auth/login HTTP/1.1" 200 324 "-" "PostmanRuntime/7.44.1"
+[2025-06-28 01:23:41] [32minfo[39m: Request completed
+[2025-06-28 01:23:41] [32minfo[39m: ::1 - - [27/Jun/2025:19:53:41 +0000] "POST /api/courses HTTP/1.1" 401 40 "-" "PostmanRuntime/7.44.1"
+[2025-06-28 01:23:44] [32minfo[39m: Request completed
+[2025-06-28 01:23:44] [32minfo[39m: ::1 - - [27/Jun/2025:19:53:44 +0000] "POST /api/courses HTTP/1.1" 401 40 "-" "PostmanRuntime/7.44.1"
+[2025-06-28 01:25:06] [31merror[39m: Error: Not found - POST /api/v1/auth/courses
+    at notFound (D:\test project 3\online-literacy-platform\backend\server\middleware\errorMiddleware.js:4:17)
+    at Layer.handle [as handle_request] (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:328:13)
+    at D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:280:10)
+    at D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:646:15
+    at next (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:265:14)
+    at Function.handle (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:175:3)
+    at router (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:47:12)
+[2025-06-28 01:25:06] [32minfo[39m: Request completed
+[2025-06-28 01:25:06] [32minfo[39m: ::1 - - [27/Jun/2025:19:55:06 +0000] "POST /api/v1/auth/courses HTTP/1.1" 404 107 "-" "PostmanRuntime/7.44.1"
+[2025-06-28 01:25:17] [31merror[39m: Error: Not found - POST /auth/courses
+    at notFound (D:\test project 3\online-literacy-platform\backend\server\middleware\errorMiddleware.js:4:17)
+    at Layer.handle [as handle_request] (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:328:13)
+    at D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:280:10)
+    at hpp (D:\test project 3\online-literacy-platform\backend\node_modules\hpp\lib\index.js:146:9)
+    at Layer.handle [as handle_request] (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:328:13)
+    at D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:286:9
+[2025-06-28 01:25:17] [32minfo[39m: Request completed
+[2025-06-28 01:25:17] [32minfo[39m: ::1 - - [27/Jun/2025:19:55:17 +0000] "POST /auth/courses HTTP/1.1" 404 100 "-" "PostmanRuntime/7.44.1"
+[2025-06-28 01:25:27] [32minfo[39m: Request completed
+[2025-06-28 01:25:27] [32minfo[39m: ::1 - - [27/Jun/2025:19:55:27 +0000] "POST /api/courses HTTP/1.1" 401 40 "-" "PostmanRuntime/7.44.1"
+[2025-06-28 01:27:10] [32minfo[39m: Request completed
+[2025-06-28 01:27:10] [32minfo[39m: ::1 - - [27/Jun/2025:19:57:10 +0000] "POST /api/courses HTTP/1.1" 401 40 "-" "PostmanRuntime/7.44.1"
+[2025-06-28 01:29:11] [32minfo[39m: Request completed
+[2025-06-28 01:29:11] [32minfo[39m: ::1 - - [27/Jun/2025:19:59:11 +0000] "POST /api/courses HTTP/1.1" 401 40 "-" "PostmanRuntime/7.44.1"
+[2025-06-28 01:31:14] [32minfo[39m: Request completed
+[2025-06-28 01:31:14] [32minfo[39m: ::1 - - [27/Jun/2025:20:01:14 +0000] "POST /api/v1/auth/login HTTP/1.1" 200 324 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+[2025-06-28 01:32:07] [32minfo[39m: Request completed
+[2025-06-28 01:32:07] [32minfo[39m: ::1 - - [27/Jun/2025:20:02:07 +0000] "POST /api/courses HTTP/1.1" 401 40 "-" "PostmanRuntime/7.44.1"
+[2025-06-28 01:34:14] [32minfo[39m: Request completed
+[2025-06-28 01:34:14] [32minfo[39m: ::1 - - [27/Jun/2025:20:04:14 +0000] "POST /api/v1/auth/register HTTP/1.1" 400 29 "-" "PostmanRuntime/7.44.1"
+[2025-06-28 01:34:28] [32minfo[39m: Request completed
+[2025-06-28 01:34:28] [32minfo[39m: ::1 - - [27/Jun/2025:20:04:28 +0000] "POST /api/v1/auth/login HTTP/1.1" 200 324 "-" "PostmanRuntime/7.44.1"
+[2025-06-28 01:34:35] [32minfo[39m: Request completed
+[2025-06-28 01:34:35] [32minfo[39m: ::1 - - [27/Jun/2025:20:04:35 +0000] "POST /api/v1/auth/register HTTP/1.1" 400 29 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+[2025-06-28 01:35:12] [32minfo[39m: Request completed
+[2025-06-28 01:35:12] [32minfo[39m: ::1 - - [27/Jun/2025:20:05:12 +0000] "POST /api/courses HTTP/1.1" 401 40 "-" "PostmanRuntime/7.44.1"
+[2025-06-28 01:35:58] [32minfo[39m: Request completed
+[2025-06-28 01:35:58] [32minfo[39m: ::1 - - [27/Jun/2025:20:05:58 +0000] "POST /api/v1/auth/login HTTP/1.1" 200 324 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+[2025-06-28 01:36:33] [32minfo[39m: Request completed
+[2025-06-28 01:36:33] [32minfo[39m: ::1 - - [27/Jun/2025:20:06:33 +0000] "GET /api/v1/courses/1 HTTP/1.1" 404 26 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+[2025-06-28 01:36:34] [32minfo[39m: Request completed
+[2025-06-28 01:36:34] [32minfo[39m: ::1 - - [27/Jun/2025:20:06:34 +0000] "GET /api/v1/courses/1 HTTP/1.1" 404 26 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+[2025-06-28 01:45:15] [32minfo[39m: Request completed
+[2025-06-28 01:45:15] [32minfo[39m: ::1 - - [27/Jun/2025:20:15:15 +0000] "POST /api/courses HTTP/1.1" 401 40 "-" "PostmanRuntime/7.44.1"
+[2025-06-28 01:48:26] [32minfo[39m: Request completed
+[2025-06-28 01:48:26] [32minfo[39m: ::1 - - [27/Jun/2025:20:18:26 +0000] "POST /api/courses HTTP/1.1" 401 40 "-" "PostmanRuntime/7.44.1"
+[2025-06-28 01:50:44] [32minfo[39m: Request completed
+[2025-06-28 01:50:44] [32minfo[39m: ::1 - - [27/Jun/2025:20:20:44 +0000] "POST /api/courses HTTP/1.1" 401 40 "-" "PostmanRuntime/7.44.1"
+[2025-06-28 01:50:56] [32minfo[39m: Request completed
+[2025-06-28 01:50:56] [32minfo[39m: ::1 - - [27/Jun/2025:20:20:56 +0000] "POST /api/v1/auth/login HTTP/1.1" 400 29 "-" "PostmanRuntime/7.44.1"
+[2025-06-28 01:51:22] [32minfo[39m: Request completed
+[2025-06-28 01:51:22] [32minfo[39m: ::1 - - [27/Jun/2025:20:21:22 +0000] "POST /api/v1/auth/register HTTP/1.1" 400 29 "-" "PostmanRuntime/7.44.1"
+[2025-06-28 01:52:15] [32minfo[39m: Request completed
+[2025-06-28 01:52:15] [32minfo[39m: ::1 - - [27/Jun/2025:20:22:15 +0000] "POST /api/v1/auth/login HTTP/1.1" 400 29 "-" "PostmanRuntime/7.44.1"
+[2025-06-28 01:52:32] [32minfo[39m: Request completed
+[2025-06-28 01:52:32] [32minfo[39m: ::1 - - [27/Jun/2025:20:22:32 +0000] "POST /api/v1/auth/login HTTP/1.1" 400 29 "-" "PostmanRuntime/7.44.1"
+[2025-06-28 01:53:58] [32minfo[39m: Request completed
+[2025-06-28 01:53:58] [32minfo[39m: ::1 - - [27/Jun/2025:20:23:58 +0000] "POST /api/v1/auth/register HTTP/1.1" 400 29 "-" "PostmanRuntime/7.44.1"
+[2025-06-28 01:54:05] [32minfo[39m: Request completed
+[2025-06-28 01:54:05] [32minfo[39m: ::1 - - [27/Jun/2025:20:24:05 +0000] "POST /api/v1/auth/login HTTP/1.1" 200 324 "-" "PostmanRuntime/7.44.1"
+[2025-06-28 01:54:24] [32minfo[39m: Request completed
+[2025-06-28 01:54:24] [32minfo[39m: ::1 - - [27/Jun/2025:20:24:24 +0000] "POST /api/courses HTTP/1.1" 401 40 "-" "PostmanRuntime/7.44.1"
+[2025-06-28 02:01:24] [32minfo[39m: 🔄 Connecting to MongoDB...
+[2025-06-28 02:01:24] [32minfo[39m: MONGO_URI: mongodb://localhost:27017/literacy-platform?connectTimeoutMS=5000
+[2025-06-28 02:01:24] [32minfo[39m: 🚀 Server running in development mode on port 5001
+[2025-06-28 02:01:24] [32minfo[39m: ✅ MongoDB Connected...
+[2025-06-28 02:01:24] [32minfo[39m: 🔄 Connecting to MongoDB...
+[2025-06-28 02:01:24] [32minfo[39m: MONGO_URI: mongodb://localhost:27017/?connectTimeoutMS=5000
+[2025-06-28 02:01:24] [32minfo[39m: 🚀 Server running in development mode on port 5000
+[2025-06-28 02:01:24] [32minfo[39m: ✅ MongoDB Connected...
+[2025-06-28 02:01:27] [32minfo[39m: 🔄 Connecting to MongoDB...
+[2025-06-28 02:01:27] [32minfo[39m: MONGO_URI: mongodb://localhost:27017/literacy-platform?connectTimeoutMS=5000
+[2025-06-28 02:01:27] [32minfo[39m: 🚀 Server running in development mode on port 5001
+[2025-06-28 02:01:27] [32minfo[39m: 🔄 Connecting to MongoDB...
+[2025-06-28 02:01:27] [32minfo[39m: ✅ MongoDB Connected...
+[2025-06-28 02:01:27] [32minfo[39m: MONGO_URI: mongodb://localhost:27017/?connectTimeoutMS=5000
+[2025-06-28 02:01:27] [32minfo[39m: 🚀 Server running in development mode on port 5000
+[2025-06-28 02:01:27] [32minfo[39m: ✅ MongoDB Connected...
+[2025-06-28 02:01:45] [32minfo[39m: Request completed
+[2025-06-28 02:01:45] [32minfo[39m: ::1 - - [27/Jun/2025:20:31:45 +0000] "POST /api/courses HTTP/1.1" 500 12 "-" "PostmanRuntime/7.44.1"
+[2025-06-28 02:02:18] [32minfo[39m: SIGINT received. Shutting down...
+[2025-06-28 02:02:44] [32minfo[39m: 🔄 Connecting to MongoDB...
+[2025-06-28 02:02:44] [32minfo[39m: MONGO_URI: mongodb://localhost:27017/literacy-platform?connectTimeoutMS=5000
+[2025-06-28 02:02:44] [32minfo[39m: 🚀 Server running in development mode on port 5001
+[2025-06-28 02:02:44] [32minfo[39m: ✅ MongoDB Connected...
+[2025-06-28 02:02:47] [32minfo[39m: SIGINT received. Shutting down...
+[2025-06-28 02:02:53] [32minfo[39m: 🔄 Connecting to MongoDB...
+[2025-06-28 02:02:53] [32minfo[39m: MONGO_URI: mongodb://localhost:27017/literacy-platform?connectTimeoutMS=5000
+[2025-06-28 02:02:53] [32minfo[39m: 🚀 Server running in development mode on port 5001
+[2025-06-28 02:02:53] [32minfo[39m: ✅ MongoDB Connected...
+[2025-06-28 02:02:55] [32minfo[39m: 🔄 Connecting to MongoDB...
+[2025-06-28 02:02:55] [32minfo[39m: MONGO_URI: mongodb://localhost:27017/?connectTimeoutMS=5000
+[2025-06-28 02:02:55] [32minfo[39m: 🚀 Server running in development mode on port 5000
+[2025-06-28 02:02:55] [32minfo[39m: ✅ MongoDB Connected...
+[2025-06-28 02:04:59] [32minfo[39m: Request completed
+[2025-06-28 02:04:59] [32minfo[39m: ::1 - - [27/Jun/2025:20:34:59 +0000] "POST /api/v1/auth/login HTTP/1.1" 200 324 "-" "PostmanRuntime/7.44.1"
+[2025-06-28 02:06:19] [32minfo[39m: Request completed
+[2025-06-28 02:06:19] [32minfo[39m: ::1 - - [27/Jun/2025:20:36:19 +0000] "POST /api/courses HTTP/1.1" 500 12 "-" "PostmanRuntime/7.44.1"
+[2025-06-28 02:12:45] [32minfo[39m: Request completed
+[2025-06-28 02:12:45] [32minfo[39m: ::1 - - [27/Jun/2025:20:42:45 +0000] "GET /api/v1/courses/1 HTTP/1.1" 404 26 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+[2025-06-28 02:12:45] [32minfo[39m: Request completed
+[2025-06-28 02:12:45] [32minfo[39m: ::1 - - [27/Jun/2025:20:42:45 +0000] "GET /api/v1/courses/1 HTTP/1.1" 404 26 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+[2025-06-28 02:19:05] [32minfo[39m: Request completed
+[2025-06-28 02:19:05] [32minfo[39m: ::1 - - [27/Jun/2025:20:49:05 +0000] "POST /api/courses HTTP/1.1" 500 12 "-" "PostmanRuntime/7.44.1"
+[2025-06-28 02:19:13] [32minfo[39m: Request completed
+[2025-06-28 02:19:13] [32minfo[39m: ::1 - - [27/Jun/2025:20:49:13 +0000] "POST /api/courses HTTP/1.1" 500 12 "-" "PostmanRuntime/7.44.1"
+[2025-06-28 02:20:40] [32minfo[39m: Request completed
+[2025-06-28 02:20:40] [32minfo[39m: ::1 - - [27/Jun/2025:20:50:40 +0000] "POST /api/courses HTTP/1.1" 500 12 "-" "PostmanRuntime/7.44.1"
+[2025-06-28 02:27:14] [32minfo[39m: 🔄 Connecting to MongoDB...
+[2025-06-28 02:27:14] [32minfo[39m: MONGO_URI: mongodb://localhost:27017/literacy-platform?connectTimeoutMS=5000
+[2025-06-28 02:27:14] [32minfo[39m: 🚀 Server running in development mode on port 5001
+[2025-06-28 02:27:14] [32minfo[39m: 🔄 Connecting to MongoDB...
+[2025-06-28 02:27:14] [32minfo[39m: MONGO_URI: mongodb://localhost:27017/?connectTimeoutMS=5000
+[2025-06-28 02:27:14] [32minfo[39m: 🚀 Server running in development mode on port 5000
+[2025-06-28 02:27:14] [32minfo[39m: ✅ MongoDB Connected...
+[2025-06-28 02:27:14] [32minfo[39m: ✅ MongoDB Connected...
+[2025-06-28 02:28:06] [32minfo[39m: SIGINT received. Shutting down...
+[2025-06-28 02:28:28] [32minfo[39m: 🔄 Connecting to MongoDB...
+[2025-06-28 02:28:28] [32minfo[39m: MONGO_URI: mongodb://localhost:27017/literacy-platform?connectTimeoutMS=5000
+[2025-06-28 02:28:28] [32minfo[39m: 🚀 Server running in development mode on port 5001
+[2025-06-28 02:28:28] [32minfo[39m: ✅ MongoDB Connected...
+[2025-06-28 02:28:35] [32minfo[39m: SIGINT received. Shutting down...
+[2025-06-28 02:28:42] [32minfo[39m: 🔄 Connecting to MongoDB...
+[2025-06-28 02:28:42] [32minfo[39m: MONGO_URI: mongodb://localhost:27017/literacy-platform?connectTimeoutMS=5000
+[2025-06-28 02:28:42] [32minfo[39m: 🚀 Server running in development mode on port 5001
+[2025-06-28 02:28:42] [32minfo[39m: ✅ MongoDB Connected...
+[2025-06-28 02:28:46] [32minfo[39m: 🔄 Connecting to MongoDB...
+[2025-06-28 02:28:46] [32minfo[39m: MONGO_URI: mongodb://localhost:27017/?connectTimeoutMS=5000
+[2025-06-28 02:28:46] [32minfo[39m: 🚀 Server running in development mode on port 5000
+[2025-06-28 02:28:46] [32minfo[39m: ✅ MongoDB Connected...
+[2025-06-28 02:30:01] [32minfo[39m: Request completed
+[2025-06-28 02:30:01] [32minfo[39m: ::1 - - [27/Jun/2025:21:00:01 +0000] "POST /api/courses HTTP/1.1" 500 12 "-" "PostmanRuntime/7.44.1"
+[2025-06-28 02:31:50] [32minfo[39m: 🔄 Connecting to MongoDB...
+[2025-06-28 02:31:50] [32minfo[39m: MONGO_URI: mongodb://localhost:27017/literacy-platform?connectTimeoutMS=5000
+[2025-06-28 02:31:51] [32minfo[39m: 🚀 Server running in development mode on port 5001
+[2025-06-28 02:31:50] [32minfo[39m: 🔄 Connecting to MongoDB...
+[2025-06-28 02:31:51] [32minfo[39m: ✅ MongoDB Connected...
+[2025-06-28 02:31:50] [32minfo[39m: MONGO_URI: mongodb://localhost:27017/?connectTimeoutMS=5000
+[2025-06-28 02:31:51] [32minfo[39m: 🚀 Server running in development mode on port 5000
+[2025-06-28 02:31:51] [32minfo[39m: ✅ MongoDB Connected...
+[2025-06-28 02:32:12] [32minfo[39m: Request completed
+[2025-06-28 02:32:12] [32minfo[39m: ::1 - - [27/Jun/2025:21:02:12 +0000] "POST /api/courses HTTP/1.1" 500 12 "-" "PostmanRuntime/7.44.1"
+[2025-06-28 02:42:28] [32minfo[39m: 🔄 Connecting to MongoDB...
+[2025-06-28 02:42:28] [32minfo[39m: MONGO_URI: mongodb://localhost:27017/literacy-platform?connectTimeoutMS=5000
+[2025-06-28 02:42:28] [32minfo[39m: 🚀 Server running in development mode on port 5001
+[2025-06-28 02:42:29] [32minfo[39m: ✅ MongoDB Connected...
+[2025-06-28 02:42:28] [32minfo[39m: 🔄 Connecting to MongoDB...
+[2025-06-28 02:42:28] [32minfo[39m: MONGO_URI: mongodb://localhost:27017/?connectTimeoutMS=5000
+[2025-06-28 02:42:28] [32minfo[39m: 🚀 Server running in development mode on port 5000
+[2025-06-28 02:42:29] [32minfo[39m: ✅ MongoDB Connected...
+[2025-06-28 02:42:36] [32minfo[39m: 🔄 Connecting to MongoDB...
+[2025-06-28 02:42:36] [32minfo[39m: MONGO_URI: mongodb://localhost:27017/literacy-platform?connectTimeoutMS=5000
+[2025-06-28 02:42:37] [32minfo[39m: 🚀 Server running in development mode on port 5001
+[2025-06-28 02:42:37] [32minfo[39m: ✅ MongoDB Connected...
+[2025-06-28 02:42:36] [32minfo[39m: 🔄 Connecting to MongoDB...
+[2025-06-28 02:42:36] [32minfo[39m: MONGO_URI: mongodb://localhost:27017/?connectTimeoutMS=5000
+[2025-06-28 02:42:37] [32minfo[39m: 🚀 Server running in development mode on port 5000
+[2025-06-28 02:42:37] [32minfo[39m: ✅ MongoDB Connected...
+[2025-06-28 02:42:59] [32minfo[39m: SIGINT received. Shutting down...
+[2025-06-28 02:43:10] [32minfo[39m: 🔄 Connecting to MongoDB...
+[2025-06-28 02:43:10] [32minfo[39m: MONGO_URI: mongodb://localhost:27017/literacy-platform?connectTimeoutMS=5000
+[2025-06-28 02:43:11] [32minfo[39m: 🚀 Server running in development mode on port 5001
+[2025-06-28 02:43:11] [32minfo[39m: ✅ MongoDB Connected...
+[2025-06-28 02:43:14] [32minfo[39m: SIGINT received. Shutting down...
+[2025-06-28 02:43:19] [32minfo[39m: 🔄 Connecting to MongoDB...
+[2025-06-28 02:43:19] [32minfo[39m: MONGO_URI: mongodb://localhost:27017/literacy-platform?connectTimeoutMS=5000
+[2025-06-28 02:43:19] [32minfo[39m: 🚀 Server running in development mode on port 5001
+[2025-06-28 02:43:19] [32minfo[39m: ✅ MongoDB Connected...
+[2025-06-28 02:43:22] [32minfo[39m: 🔄 Connecting to MongoDB...
+[2025-06-28 02:43:22] [32minfo[39m: MONGO_URI: mongodb://localhost:27017/?connectTimeoutMS=5000
+[2025-06-28 02:43:22] [32minfo[39m: 🚀 Server running in development mode on port 5000
+[2025-06-28 02:43:22] [32minfo[39m: ✅ MongoDB Connected...
+[2025-06-28 02:44:49] [32minfo[39m: Request completed
+[2025-06-28 02:44:49] [32minfo[39m: ::1 - - [27/Jun/2025:21:14:49 +0000] "POST /api/courses HTTP/1.1" 500 12 "-" "PostmanRuntime/7.44.1"
+[2025-06-28 02:46:34] [32minfo[39m: 🔄 Connecting to MongoDB...
+[2025-06-28 02:46:34] [32minfo[39m: MONGO_URI: mongodb://localhost:27017/literacy-platform?connectTimeoutMS=5000
+[2025-06-28 02:46:34] [32minfo[39m: 🚀 Server running in development mode on port 5001
+[2025-06-28 02:46:35] [32minfo[39m: ✅ MongoDB Connected...
+[2025-06-28 02:46:34] [32minfo[39m: 🔄 Connecting to MongoDB...
+[2025-06-28 02:46:34] [32minfo[39m: MONGO_URI: mongodb://localhost:27017/?connectTimeoutMS=5000
+[2025-06-28 02:46:35] [32minfo[39m: 🚀 Server running in development mode on port 5000
+[2025-06-28 02:46:35] [32minfo[39m: ✅ MongoDB Connected...
+[2025-06-28 02:47:01] [32minfo[39m: SIGINT received. Shutting down...
+[2025-06-28 02:47:14] [32minfo[39m: SIGINT received. Shutting down...
+[2025-06-28 02:47:23] [32minfo[39m: 🔄 Connecting to MongoDB...
+[2025-06-28 02:47:23] [32minfo[39m: MONGO_URI: mongodb://localhost:27017/literacy-platform?connectTimeoutMS=5000
+[2025-06-28 02:47:23] [32minfo[39m: 🚀 Server running in development mode on port 5001
+[2025-06-28 02:47:23] [32minfo[39m: ✅ MongoDB Connected...
+[2025-06-28 02:47:29] [32minfo[39m: 🔄 Connecting to MongoDB...
+[2025-06-28 02:47:29] [32minfo[39m: MONGO_URI: mongodb://localhost:27017/literacy-platform?connectTimeoutMS=5000
+[2025-06-28 02:47:29] [32minfo[39m: 🚀 Server running in development mode on port 5001
+[2025-06-28 02:47:29] [32minfo[39m: ✅ MongoDB Connected...
+[2025-06-28 02:47:33] [32minfo[39m: 🔄 Connecting to MongoDB...
+[2025-06-28 02:47:33] [32minfo[39m: MONGO_URI: mongodb://localhost:27017/?connectTimeoutMS=5000
+[2025-06-28 02:47:33] [32minfo[39m: 🚀 Server running in development mode on port 5000
+[2025-06-28 02:47:33] [32minfo[39m: ✅ MongoDB Connected...
+[2025-06-28 02:47:47] [32minfo[39m: Request completed
+[2025-06-28 02:47:47] [32minfo[39m: ::1 - - [27/Jun/2025:21:17:47 +0000] "POST /api/courses HTTP/1.1" 201 315 "-" "PostmanRuntime/7.44.1"
+[2025-06-28 02:48:01] [32minfo[39m: Request completed
+[2025-06-28 02:48:01] [32minfo[39m: ::1 - - [27/Jun/2025:21:18:01 +0000] "GET /api/v1/courses/1 HTTP/1.1" 404 26 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+[2025-06-28 02:48:01] [32minfo[39m: Request completed
+[2025-06-28 02:48:01] [32minfo[39m: ::1 - - [27/Jun/2025:21:18:01 +0000] "GET /api/v1/courses/1 HTTP/1.1" 404 26 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+[2025-06-28 02:48:40] [32minfo[39m: Request completed
+[2025-06-28 02:48:40] [32minfo[39m: ::1 - - [27/Jun/2025:21:18:40 +0000] "GET /api/v1/courses/2 HTTP/1.1" 404 26 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+[2025-06-28 02:48:40] [32minfo[39m: Request completed
+[2025-06-28 02:48:40] [32minfo[39m: ::1 - - [27/Jun/2025:21:18:40 +0000] "GET /api/v1/courses/2 HTTP/1.1" 404 26 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+[2025-06-28 02:48:44] [32minfo[39m: Request completed
+[2025-06-28 02:48:44] [32minfo[39m: ::1 - - [27/Jun/2025:21:18:44 +0000] "GET /api/v1/courses/1 HTTP/1.1" 404 26 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+[2025-06-28 02:48:44] [32minfo[39m: Request completed
+[2025-06-28 02:48:44] [32minfo[39m: ::1 - - [27/Jun/2025:21:18:44 +0000] "GET /api/v1/courses/1 HTTP/1.1" 404 26 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+[2025-06-28 02:50:04] [32minfo[39m: Request completed
+[2025-06-28 02:50:04] [32minfo[39m: ::1 - - [27/Jun/2025:21:20:04 +0000] "GET /api/v1/courses/1 HTTP/1.1" 404 26 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+[2025-06-28 02:50:04] [32minfo[39m: Request completed
+[2025-06-28 02:50:04] [32minfo[39m: ::1 - - [27/Jun/2025:21:20:04 +0000] "GET /api/v1/courses/1 HTTP/1.1" 404 26 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
