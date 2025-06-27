@@ -10,12 +10,13 @@ import Dashboard from './pages/Dashboard';
 import Courses from './pages/Courses';
 import CourseDetail from './pages/CourseDetail';
 import Profile from './pages/Profile';
-import AdminDashboard from './pages/AdminDashboard'; // ✅ Added
-import NotFound from './pages/NotFound'; // ✅ Added
+import AdminDashboard from './pages/AdminDashboard';
+import NotFound from './pages/NotFound';
 
 import PrivateRoute from './components/PrivateRoute';
 import AdminRoute from './components/AdminRoute';
 import Navbar from './components/Navbar';
+import Header from './components/Header'; // ✅ Import Header
 import Footer from './components/Footer';
 import LoadingSpinner from './components/LoadingSpinner';
 import ToastNotification from './components/ToastNotification';
@@ -28,7 +29,8 @@ function App() {
       <PersistGate loading={<LoadingSpinner />} persistor={persistor}>
         <Router>
           <div className="app-container">
-            <Navbar />
+            <Navbar /> {/* ✅ Navbar for navigation links */}
+            <Header /> {/* ✅ Header for user auth actions */}
             <ToastNotification />
             <main className="main-content">
               <Routes>
@@ -50,7 +52,7 @@ function App() {
                   <Route path="/admin/dashboard" element={<AdminDashboard />} />
                 </Route>
 
-                {/* 404 Handling */}
+                {/* 404 Page */}
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </main>

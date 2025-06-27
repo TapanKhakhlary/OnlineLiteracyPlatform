@@ -22,7 +22,7 @@ const api = axios.create({
 api.interceptors.request.use(
   (config) => {
     // Get token from storage
-    const token = localStorage.getItem('token');
+    const token = localStorage.getItem('authtoken');
 
     // If token exists, add to headers
     if (token) {

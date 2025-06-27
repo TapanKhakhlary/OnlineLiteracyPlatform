@@ -1,51 +1,77 @@
 import api from './api';
 
-// Helper function to handle errors consistently
-const handleError = (error) => {
-  console.error('❌ API Error:', {
-    url: error.config?.url,
-    method: error.config?.method,
+// Error handling utility
+const handleAuthError = (error) => {
+  // Log detailed error information for debugging
+  console.error('Auth Error:', {
+    endpoint: error.config?.url,
     status: error.response?.status,
-    data: error.response?.data,
+    message: error.message,
+    responseData: error.response?.data,
   });
+  // Extract meaningful error message
+  const errorMessage =
+    error.response?.data?.msg ||
+    error.response?.data?.message ||
+    error.message ||
+    'Authentication failed';
 
-  const message =
-    error.response?.data?.msg || error.response?.data?.message || error.message || 'Request failed';
+  // Create enhanced error object
+  const authError = new Error(errorMessage);
+  authError.status = error.response?.status;
+  authError.details = error.response?.data?.errors || null;
+  authError.code = error.response?.data?.code || null;
 
-  const err = new Error(message);
-  err.status = error.response?.status;
-  err.details = error.response?.data?.errors || null;
-
-  return Promise.reject(err);
+  return Promise.reject(authError);
 };
 
-// Token management utilities
-const storeToken = (token) => {
-  localStorage.setItem('token', token);
+// Token management with expiration support
+const TOKEN_KEY = 'authToken';
+const EXPIRATION_KEY = 'tokenExpiration';
+
+const storeAuthData = (token, expiresIn = 3600) => {
+  const expiration = Date.now() + expiresIn * 1000;
+  localStorage.setItem(TOKEN_KEY, token);
+  localStorage.setItem(EXPIRATION_KEY, expiration.toString());
 };
 
-const getToken = () => {
-  return localStorage.getItem('token');
+const getAuthToken = () => {
+  const token = localStorage.getItem(TOKEN_KEY);
+  const expiration = localStorage.getItem(EXPIRATION_KEY);
+
+  if (!token || !expiration) return null;
+
+  if (Date.now() > parseInt(expiration, 10)) {
+    clearAuthData();
+    return null;
+  }
+
+  return token;
 };
 
-const removeToken = () => {
-  localStorage.removeItem('token');
+const clearAuthData = () => {
+  localStorage.removeItem(TOKEN_KEY);
+  localStorage.removeItem(EXPIRATION_KEY);
 };
 
 // Auth API methods
 export const login = async (credentials) => {
   try {
     const response = await api.post('/auth/login', credentials);
-
-    const token = response?.data?.token;
-    if (token) {
-      storeToken(token);
-    }
-    return response.data;
-  } catch (error) {
     // eslint-disable-next-line no-console
-    console.error('❌ Full Error Object:', error);
-    return handleError(error);
+    console.log('Login API response:', response);
+
+    if (response.token) {
+      storeAuthData(response.token, response.expiresIn || 604800); // 7 days fallback
+    }
+
+    return {
+      user: response.user,
+      token: response.token,
+      expiresIn: response.expiresIn,
+    };
+  } catch (error) {
+    return handleAuthError(error);
   }
 };
 
@@ -53,16 +79,17 @@ export const register = async (userData) => {
   try {
     const response = await api.post('/auth/register', userData);
 
-    const token = response?.data?.token;
-    if (token) {
-      storeToken(token);
+    if (response.token) {
+      storeAuthData(response.token, response.expiresIn || 604800);
     }
 
-    return response.data;
+    return {
+      user: response.user,
+      token: response.token,
+      expiresIn: response.expiresIn,
+    };
   } catch (error) {
-    // eslint-disable-next-line no-console
-    console.error('❌ Full Error Object:', error);
-    return handleError(error);
+    return handleAuthError(error);
   }
 };
 
@@ -71,33 +98,48 @@ export const getCurrentUser = async () => {
     const response = await api.get('/auth/me');
     return response.data;
   } catch (error) {
-    // If unauthorized, clear the invalid token
     if (error.response?.status === 401) {
-      removeToken();
+      clearAuthData();
     }
-    console.error('❌ Full Error Object:', error);
-    return handleError(error);
+    return handleAuthError(error);
   }
 };
 
-export const logout = () => {
-  // Clear the token from storage
-  removeToken();
+export const logout = async () => {
+  try {
+    // Optional: Call server-side logout if needed
+    await api.post('/auth/logout');
+  } finally {
+    clearAuthData();
+  }
+};
 
-  // Optional: You might want to add an API call to invalidate the token on the server
-  // await api.post('/auth/logout');
+export const refreshToken = async () => {
+  try {
+    const response = await api.post('/auth/refresh-token');
+    if (response.data.token) {
+      storeAuthData(response.data.token, response.data.expiresIn);
+    }
+    return {
+      token: response.data.token,
+      expiresIn: response.data.expiresIn,
+    };
+  } catch (error) {
+    clearAuthData();
+    return handleAuthError(error);
+  }
 };
 
 export const isAuthenticated = () => {
-  return !!getToken();
+  return !!getAuthToken();
 };
 
-export const updateUserProfile = async (profileData) => {
+export const updateProfile = async (profileData) => {
   try {
     const response = await api.put('/auth/me', profileData);
     return response.data;
   } catch (error) {
-    return handleError(error);
+    return handleAuthError(error);
   }
 };
 
@@ -109,20 +151,6 @@ export const changePassword = async (currentPassword, newPassword) => {
     });
     return response.data;
   } catch (error) {
-    return handleError(error);
-  }
-};
-
-// Add refresh token method if your backend supports it
-export const refreshToken = async () => {
-  try {
-    const response = await api.post('/auth/refresh-token');
-    if (response.data.token) {
-      storeToken(response.data.token);
-    }
-    return response.data;
-  } catch (error) {
-    removeToken();
-    return handleError(error);
+    return handleAuthError(error);
   }
 };

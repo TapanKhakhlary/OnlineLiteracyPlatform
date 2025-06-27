@@ -29,21 +29,29 @@ export default function Login() {
   }, []);
 
   const onSubmit = async (data) => {
+    const loginData = {
+      ...data,
+      rememberMe,
+    };
+
     try {
-      const resultAction = await dispatch(loginUser(data));
+      const resultAction = await dispatch(loginUser(loginData));
 
       if (loginUser.fulfilled.match(resultAction)) {
         if (rememberMe) {
-          localStorage.setItem('rememberedEmail', data.email);
+          localStorage.setItem('rememberedEmail', loginData.email);
         } else {
           localStorage.removeItem('rememberedEmail');
         }
 
         toast.success('Login successful!');
         navigate(from, { replace: true });
+      } else {
+        toast.error(resultAction.payload || 'Login failed');
       }
-    } catch {
-      // Error handled globally
+    } catch (err) {
+      console.error('Login error:', err);
+      toast.error('Something went wrong');
     }
   };
 
@@ -54,6 +62,14 @@ export default function Login() {
   const handleFacebookLogin = () => {
     window.location.href = `${process.env.REACT_APP_API_URL}/auth/facebook`;
   };
+
+  useEffect(() => {
+    // eslint-disable-next-line no-console
+    console.log('Login status:', status);
+    // eslint-disable-next-line no-console
+    console.log('Login error:', error);
+  }, [status, error]);
+
   return (
     <div className="auth-container">
       <div className="auth-card">
