@@ -1,0 +1,21 @@
+.courses-page {
+  padding: 2rem;
+  .courses-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .course-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .loading,
+  .error-message,
+  .no-courses {
+    text-align: center;
+    margin-top: 2rem;
+    font-weight: 500;
+  }
+}

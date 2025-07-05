@@ -32,7 +32,6 @@ export default function Dashboard() {
     <div className="dashboard-container">
       <h1>Dashboard</h1>
       <p>Welcome, tapan123!</p>
-      <p>Your role: student</p>
 
       <div className="dashboard-grid">
         <section className="dashboard-section courses">

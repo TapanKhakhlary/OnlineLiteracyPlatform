@@ -1063,3 +1063,91 @@
     at D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:286:9
 [2025-06-28 02:53:05] [32minfo[39m: Request completed
 [2025-06-28 02:53:05] [32minfo[39m: ::1 - - [27/Jun/2025:21:23:05 +0000] "GET /favicon.ico HTTP/1.1" 404 98 "http://localhost:5000/api/courses" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+[2025-06-28 03:01:38] [32minfo[39m: Request completed
+[2025-06-28 03:01:38] [32minfo[39m: ::1 - - [27/Jun/2025:21:31:38 +0000] "GET /api/v1/courses/1 HTTP/1.1" 404 26 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+[2025-06-28 03:01:38] [32minfo[39m: Request completed
+[2025-06-28 03:01:38] [32minfo[39m: ::1 - - [27/Jun/2025:21:31:38 +0000] "GET /api/v1/courses/1 HTTP/1.1" 404 26 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+[2025-06-28 03:04:30] [32minfo[39m: Request completed
+[2025-06-28 03:04:30] [32minfo[39m: ::1 - - [27/Jun/2025:21:34:30 +0000] "GET /api/v1/courses/1 HTTP/1.1" 404 26 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+[2025-06-28 03:04:30] [32minfo[39m: Request completed
+[2025-06-28 03:04:30] [32minfo[39m: ::1 - - [27/Jun/2025:21:34:30 +0000] "GET /api/v1/courses/1 HTTP/1.1" 404 26 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+[2025-06-28 03:04:56] [32minfo[39m: Request completed
+[2025-06-28 03:04:56] [32minfo[39m: ::1 - - [27/Jun/2025:21:34:56 +0000] "GET /api/v1/courses/1 HTTP/1.1" 404 26 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+[2025-06-28 03:04:56] [32minfo[39m: Request completed
+[2025-06-28 03:04:56] [32minfo[39m: ::1 - - [27/Jun/2025:21:34:56 +0000] "GET /api/v1/courses/1 HTTP/1.1" 404 26 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+[2025-06-28 03:05:21] [32minfo[39m: Request completed
+[2025-06-28 03:05:21] [32minfo[39m: ::1 - - [27/Jun/2025:21:35:21 +0000] "GET /api/v1/courses/1 HTTP/1.1" 404 26 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+[2025-06-28 03:05:21] [32minfo[39m: Request completed
+[2025-06-28 03:05:21] [32minfo[39m: ::1 - - [27/Jun/2025:21:35:21 +0000] "GET /api/v1/courses/1 HTTP/1.1" 404 26 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+[2025-06-28 03:16:11] [32minfo[39m: 🔄 Connecting to MongoDB...
+[2025-06-28 03:16:11] [32minfo[39m: MONGO_URI: mongodb://localhost:27017/literacy-platform?connectTimeoutMS=5000
+[2025-06-28 03:16:11] [32minfo[39m: 🚀 Server running in development mode on port 5001
+[2025-06-28 03:16:11] [32minfo[39m: 🔄 Connecting to MongoDB...
+[2025-06-28 03:16:11] [32minfo[39m: ✅ MongoDB Connected...
+[2025-06-28 03:16:11] [32minfo[39m: MONGO_URI: mongodb://localhost:27017/?connectTimeoutMS=5000
+[2025-06-28 03:16:11] [32minfo[39m: 🚀 Server running in development mode on port 5000
+[2025-06-28 03:16:11] [32minfo[39m: ✅ MongoDB Connected...
+[2025-06-28 03:16:23] [32minfo[39m: SIGINT received. Shutting down...
+[2025-06-28 03:16:44] [32minfo[39m: 🔄 Connecting to MongoDB...
+[2025-06-28 03:16:44] [32minfo[39m: MONGO_URI: mongodb://localhost:27017/literacy-platform?connectTimeoutMS=5000
+[2025-06-28 03:16:44] [32minfo[39m: 🚀 Server running in development mode on port 5001
+[2025-06-28 03:16:44] [32minfo[39m: ✅ MongoDB Connected...
+[2025-06-28 03:16:53] [32minfo[39m: SIGINT received. Shutting down...
+[2025-06-28 03:16:57] [32minfo[39m: 🔄 Connecting to MongoDB...
+[2025-06-28 03:16:57] [32minfo[39m: MONGO_URI: mongodb://localhost:27017/literacy-platform?connectTimeoutMS=5000
+[2025-06-28 03:16:57] [32minfo[39m: 🚀 Server running in development mode on port 5001
+[2025-06-28 03:16:57] [32minfo[39m: ✅ MongoDB Connected...
+[2025-06-28 03:17:00] [32minfo[39m: 🔄 Connecting to MongoDB...
+[2025-06-28 03:17:00] [32minfo[39m: MONGO_URI: mongodb://localhost:27017/?connectTimeoutMS=5000
+[2025-06-28 03:17:00] [32minfo[39m: 🚀 Server running in development mode on port 5000
+[2025-06-28 03:17:00] [32minfo[39m: ✅ MongoDB Connected...
+[2025-06-28 03:19:18] [32minfo[39m: Request completed
+[2025-06-28 03:19:18] [32minfo[39m: ::1 - - [27/Jun/2025:21:49:18 +0000] "GET /api/v1/courses/1 HTTP/1.1" 404 26 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+[2025-06-28 03:19:18] [32minfo[39m: Request completed
+[2025-06-28 03:19:18] [32minfo[39m: ::1 - - [27/Jun/2025:21:49:18 +0000] "GET /api/v1/courses/1 HTTP/1.1" 404 26 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+[2025-06-28 03:19:26] [32minfo[39m: Request completed
+[2025-06-28 03:19:26] [32minfo[39m: ::1 - - [27/Jun/2025:21:49:26 +0000] "GET /api/v1/courses/1 HTTP/1.1" 404 26 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+[2025-06-28 03:19:26] [32minfo[39m: Request completed
+[2025-06-28 03:19:26] [32minfo[39m: ::1 - - [27/Jun/2025:21:49:26 +0000] "GET /api/v1/courses/1 HTTP/1.1" 404 26 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+[2025-07-05 20:37:48] [32minfo[39m: 🔄 Connecting to MongoDB...
+[2025-07-05 20:37:48] [32minfo[39m: MONGO_URI: mongodb://localhost:27017/literacy-platform?connectTimeoutMS=5000
+[2025-07-05 20:37:49] [32minfo[39m: 🚀 Server running in development mode on port 5001
+[2025-07-05 20:37:49] [32minfo[39m: ✅ MongoDB Connected...
+[2025-07-05 20:40:38] [32minfo[39m: 🔄 Connecting to MongoDB...
+[2025-07-05 20:40:38] [32minfo[39m: MONGO_URI: mongodb://localhost:27017/literacy-platform?connectTimeoutMS=5000
+[2025-07-05 20:40:38] [32minfo[39m: 🚀 Server running in development mode on port 5001
+[2025-07-05 20:40:38] [32minfo[39m: ✅ MongoDB Connected...
+[2025-07-05 20:40:46] [32minfo[39m: 🔄 Connecting to MongoDB...
+[2025-07-05 20:40:46] [32minfo[39m: MONGO_URI: mongodb://localhost:27017/?connectTimeoutMS=5000
+[2025-07-05 20:40:47] [32minfo[39m: 🚀 Server running in development mode on port 5000
+[2025-07-05 20:40:47] [32minfo[39m: ✅ MongoDB Connected...
+[2025-07-05 20:43:29] [32minfo[39m: Request completed
+[2025-07-05 20:43:29] [32minfo[39m: ::1 - - [05/Jul/2025:15:13:29 +0000] "POST /api/v1/auth/login HTTP/1.1" 200 324 "-" "PostmanRuntime/7.44.1"
+[2025-07-05 20:43:33] [32minfo[39m: Request completed
+[2025-07-05 20:43:33] [32minfo[39m: ::1 - - [05/Jul/2025:15:13:33 +0000] "POST /api/v1/auth/login HTTP/1.1" 200 324 "-" "PostmanRuntime/7.44.1"
+[2025-07-05 20:43:36] [32minfo[39m: Request completed
+[2025-07-05 20:43:36] [32minfo[39m: ::1 - - [05/Jul/2025:15:13:36 +0000] "POST /api/courses HTTP/1.1" 401 28 "-" "PostmanRuntime/7.44.1"
+[2025-07-05 20:43:39] [32minfo[39m: Request completed
+[2025-07-05 20:43:39] [32minfo[39m: ::1 - - [05/Jul/2025:15:13:39 +0000] "POST /api/v1/auth/register HTTP/1.1" 400 29 "-" "PostmanRuntime/7.44.1"
+[2025-07-05 20:43:46] [32minfo[39m: Request completed
+[2025-07-05 20:43:46] [32minfo[39m: ::1 - - [05/Jul/2025:15:13:46 +0000] "POST /api/courses HTTP/1.1" 401 28 "-" "PostmanRuntime/7.44.1"
+[2025-07-05 20:44:04] [32minfo[39m: Request completed
+[2025-07-05 20:44:04] [32minfo[39m: ::1 - - [05/Jul/2025:15:14:04 +0000] "POST /api/v1/auth/login HTTP/1.1" 200 324 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0"
+[2025-07-05 20:44:23] [32minfo[39m: Request completed
+[2025-07-05 20:44:23] [32minfo[39m: ::1 - - [05/Jul/2025:15:14:23 +0000] "POST /api/v1/auth/login HTTP/1.1" 200 324 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0"
+[2025-07-05 20:44:27] [32minfo[39m: Request completed
+[2025-07-05 20:44:27] [32minfo[39m: ::1 - - [05/Jul/2025:15:14:27 +0000] "POST /api/v1/auth/login HTTP/1.1" 200 324 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0"
+[2025-07-05 20:44:36] [32minfo[39m: Request completed
+[2025-07-05 20:44:36] [32minfo[39m: ::1 - - [05/Jul/2025:15:14:36 +0000] "GET /api/v1/courses/1 HTTP/1.1" 404 26 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0"
+[2025-07-05 20:44:36] [32minfo[39m: Request completed
+[2025-07-05 20:44:36] [32minfo[39m: ::1 - - [05/Jul/2025:15:14:36 +0000] "GET /api/v1/courses/1 HTTP/1.1" 404 26 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0"
+[2025-07-05 21:05:17] [32minfo[39m: Request completed
+[2025-07-05 21:05:17] [32minfo[39m: ::1 - - [05/Jul/2025:15:35:17 +0000] "POST /api/v1/auth/login HTTP/1.1" 400 29 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0"
+[2025-07-05 21:05:43] [32minfo[39m: Request completed
+[2025-07-05 21:05:43] [32minfo[39m: ::1 - - [05/Jul/2025:15:35:43 +0000] "POST /api/v1/auth/login HTTP/1.1" 400 29 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0"
+[2025-07-05 21:05:56] [32minfo[39m: Request completed
+[2025-07-05 21:05:56] [32minfo[39m: ::1 - - [05/Jul/2025:15:35:56 +0000] "POST /api/v1/auth/login HTTP/1.1" 400 29 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0"
+[2025-07-05 21:17:26] [32minfo[39m: Request completed
+[2025-07-05 21:17:26] [32minfo[39m: ::1 - - [05/Jul/2025:15:47:26 +0000] "POST /api/v1/auth/login HTTP/1.1" 200 324 "-" "PostmanRuntime/7.44.1"
+[2025-07-05 21:18:05] [32minfo[39m: Request completed
+[2025-07-05 21:18:05] [32minfo[39m: ::1 - - [05/Jul/2025:15:48:05 +0000] "POST /api/v1/auth/login HTTP/1.1" 200 324 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0"

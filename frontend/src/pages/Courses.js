@@ -12,9 +12,9 @@ const Courses = () => {
       try {
         const data = await getCourses();
         setCourses(data);
-        setLoading(false);
       } catch (err) {
-        setError('Failed to load courses');
+        setError('⚠️ Failed to load courses. Please try again later.');
+      } finally {
         setLoading(false);
       }
     };
@@ -22,16 +22,21 @@ const Courses = () => {
     fetchCourses();
   }, []);
 
-  if (loading) return <div>Loading...</div>;
-  if (error) return <div>{error}</div>;
+  if (loading) return <div className="loading">Loading courses...</div>;
+  if (error) return <div className="error-message">{error}</div>;
 
   return (
-    <div className="courses-container">
-      <h1>Available Courses</h1>
+    <div className="courses-page">
+      <h1 className="courses-title">📚 Available Courses</h1>
+
+      {/* Optional: Filter UI could go here */}
+
       <div className="course-list">
-        {courses.map((course) => (
-          <CourseCard key={course._id} course={course} />
-        ))}
+        {courses.length === 0 ? (
+          <div className="no-courses">No courses available at the moment.</div>
+        ) : (
+          courses.map((course) => <CourseCard key={course._id} course={course} />)
+        )}
       </div>
     </div>
   );
