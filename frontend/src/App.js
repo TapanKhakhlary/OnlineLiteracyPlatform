@@ -15,8 +15,8 @@ import NotFound from './pages/NotFound';
 
 import PrivateRoute from './components/PrivateRoute';
 import AdminRoute from './components/AdminRoute';
-import Navbar from './components/Navbar';
-import Header from './components/Header'; // ✅ Import Header
+// import Navbar from './components/Navbar'; // ❌ Remove this line
+import Header from './components/Header'; // ✅ Keep Header
 import Footer from './components/Footer';
 import LoadingSpinner from './components/LoadingSpinner';
 import ToastNotification from './components/ToastNotification';
@@ -29,8 +29,8 @@ function App() {
       <PersistGate loading={<LoadingSpinner />} persistor={persistor}>
         <Router>
           <div className="app-container">
-            <Navbar /> {/* ✅ Navbar for navigation links */}
-            <Header /> {/* ✅ Header for user auth actions */}
+            {/* <Navbar /> */} {/* ❌ Removed Navbar */}
+            <Header /> {/* ✅ Only Header remains */}
             <ToastNotification />
             <main className="main-content">
               <Routes>

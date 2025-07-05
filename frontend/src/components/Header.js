@@ -1,4 +1,3 @@
-// src/components/Header.js
 import { Link, useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { logout } from '../features/auth/authSlice';
@@ -24,14 +23,22 @@ export default function Header() {
   return (
     <div className="header">
       <div className="left">
-        <span className="logo">🌐 LiteracyPro</span>
+        <span className="logo">🌐 Online Literacy Platform</span>
+        <span className="logo-subtext">LiteracyPro</span>
       </div>
       <div className="right">
         <div className="auth">
           {isAuthenticated ? (
             <>
-              <span>Welcome, {user?.username}</span>
-              <button onClick={handleLogout}>Logout</button>
+              <span className="user-info">
+                Welcome, <strong>{user?.username}</strong>
+              </span>
+              <Link to="/profile" className="settings-btn">
+                ⚙️ Settings
+              </Link>
+              <button onClick={handleLogout} className="logout-btn">
+                Logout
+              </button>
             </>
           ) : (
             <>

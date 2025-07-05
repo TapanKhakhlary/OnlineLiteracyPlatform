@@ -1,4 +1,4 @@
-// src/components/Navbar.js
+/*// src/components/Navbar.js
 import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { logout } from '../features/auth/authSlice';
@@ -63,4 +63,4 @@ export default function Navbar() {
       </div>
     </nav>
   );
-}
+}*/

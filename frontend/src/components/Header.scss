@@ -2,13 +2,26 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.75rem 2rem;
-  background-color: var(--header-bg);
-  color: var(--text-color);
+  padding: 1rem 2rem;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
 
-  .left .logo {
-    font-weight: bold;
-    font-size: 1.25rem;
+  .left {
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .logo-text {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: var(--color-primary);
+    }
+
+    .logo-subtext {
+      font-size: 0.9rem;
+      color: #044df6;
+    }
   }
 
   .right {
@@ -18,12 +31,12 @@
 
     .auth {
       display: flex;
-      gap: 1rem;
       align-items: center;
+      gap: 1rem;
 
       a {
-        color: var(--link-color);
         text-decoration: none;
+        color: #333;
         font-weight: 500;
 
         &:hover {
@@ -31,27 +44,37 @@
         }
       }
 
-      button {
-        padding: 0.25rem 0.5rem;
+      .user-info {
+        font-weight: 500;
+      }
+
+      .settings-btn {
+        text-decoration: none;
+        color: #333;
+        font-weight: 500;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      .logout-button {
+        background: transparent;
         border: none;
-        background-color: #e74c3c;
-        color: #fff;
-        border-radius: 4px;
+        color: var(--color-accent);
         cursor: pointer;
 
         &:hover {
-          background-color: #c0392b;
+          text-decoration: underline;
         }
       }
     }
 
     .theme-toggle {
       background: none;
-      border: 1px solid var(--border-color);
-      padding: 0.3rem 0.6rem;
-      border-radius: 6px;
+      border: none;
       cursor: pointer;
-      font-size: 0.9rem;
+      font-size: 1rem;
     }
   }
 }
