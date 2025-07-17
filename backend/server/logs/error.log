@@ -173,3 +173,47 @@
     at Layer.handle [as handle_request] (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\layer.js:95:5)
     at trim_prefix (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:328:13)
     at D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:286:9
+[2025-07-17 21:04:34] [31merror[39m: Error: Not found - GET /favicon.ico
+    at notFound (D:\test project 3\online-literacy-platform\backend\server\middleware\errorMiddleware.js:4:17)
+    at Layer.handle [as handle_request] (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:328:13)
+    at D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:280:10)
+    at hpp (D:\test project 3\online-literacy-platform\backend\node_modules\hpp\lib\index.js:146:9)
+    at Layer.handle [as handle_request] (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:328:13)
+    at D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:286:9
+[2025-07-17 21:20:20] [31merror[39m: Error: Not found - GET /api
+    at notFound (D:\test project 3\online-literacy-platform\backend\server\middleware\errorMiddleware.js:4:17)
+    at Layer.handle [as handle_request] (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:328:13)
+    at D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:280:10)
+    at hpp (D:\test project 3\online-literacy-platform\backend\node_modules\hpp\lib\index.js:146:9)
+    at Layer.handle [as handle_request] (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:328:13)
+    at D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:286:9
+[2025-07-17 21:20:26] [31merror[39m: Error: Not found - GET /
+    at notFound (D:\test project 3\online-literacy-platform\backend\server\middleware\errorMiddleware.js:4:17)
+    at Layer.handle [as handle_request] (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:328:13)
+    at D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:280:10)
+    at hpp (D:\test project 3\online-literacy-platform\backend\node_modules\hpp\lib\index.js:146:9)
+    at Layer.handle [as handle_request] (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:328:13)
+    at D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:286:9
+[2025-07-17 21:20:30] [31merror[39m: Error: Not found - GET /
+    at notFound (D:\test project 3\online-literacy-platform\backend\server\middleware\errorMiddleware.js:4:17)
+    at Layer.handle [as handle_request] (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:328:13)
+    at D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:280:10)
+    at hpp (D:\test project 3\online-literacy-platform\backend\node_modules\hpp\lib\index.js:146:9)
+    at Layer.handle [as handle_request] (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:328:13)
+    at D:\test project 3\online-literacy-platform\backend\server\node_modules\express\lib\router\index.js:286:9
